@@ -1,0 +1,755 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/ansible_vault/">
+      
+      
+        <link rel="prev" href="../about/">
+      
+      
+        <link rel="next" href="../classes/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
+    
+    
+      
+        <title>Ansible Vault - ndfc-python</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#ansible-vault" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="ndfc-python" class="md-header__button md-logo" aria-label="ndfc-python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ndfc-python
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ansible Vault
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/allenrobel/ndfc-python" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    allenrobel/ndfc-python
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ndfc-python" class="md-nav__button md-logo" aria-label="ndfc-python" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    ndfc-python
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/allenrobel/ndfc-python" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    allenrobel/ndfc-python
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to ndfc-python
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ansible Vault
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Ansible Vault
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ansible-python-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ansible Python Libraries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ansible Python Libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-your-vault-with-keyvalues-specific-to-ndfc-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update your Vault with key/values specific to ndfc-python
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Update your Vault with key/values specific to ndfc-python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modify-pathtoyouransiblevaultfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modify /path/to/your/ansible/vault/file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modify /path/to/your/ansible/vault/file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-ansible_password-password-for-ndfc-controller-and-device_password-password-for-nx-os-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit ansible_password (password for NDFC controller) and device_password (password for NX-OS switches)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-the-domain-for-nexus-dashboard-controller-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add the domain for Nexus Dashboard Controller login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-usernames-for-nexus-dashboard-controller-and-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add usernames for Nexus Dashboard Controller and switches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-the-ip-address-of-your-nexus-dashboard-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add the ip address of your Nexus Dashboard Controller
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Classes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ansible-python-libraries" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ansible Python Libraries
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ansible Python Libraries">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Config File
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#update-your-vault-with-keyvalues-specific-to-ndfc-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Update your Vault with key/values specific to ndfc-python
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Update your Vault with key/values specific to ndfc-python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#modify-pathtoyouransiblevaultfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modify /path/to/your/ansible/vault/file
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Modify /path/to/your/ansible/vault/file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#edit-ansible_password-password-for-ndfc-controller-and-device_password-password-for-nx-os-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Edit ansible_password (password for NDFC controller) and device_password (password for NX-OS switches)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-the-domain-for-nexus-dashboard-controller-login" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add the domain for Nexus Dashboard Controller login
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-usernames-for-nexus-dashboard-controller-and-switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add usernames for Nexus Dashboard Controller and switches
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-the-ip-address-of-your-nexus-dashboard-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add the ip address of your Nexus Dashboard Controller
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="ansible-vault">Ansible Vault</h1>
+<p>ndfc-python can be modified to work with Ansible Vault, per below.</p>
+<h2 id="ansible-python-libraries">Ansible Python Libraries</h2>
+<p>If you want to use Ansible Vault with ndfc-python, install Ansible.</p>
+<h3 id="example">Example</h3>
+<pre><code class="language-bash">pip install ansible
+</code></pre>
+<h2 id="config-file">Config File</h2>
+<p>To use these scripts and libraries with Ansible Vault, you'll need to update a common settings
+file and set the environment variable <code>NDFC_PYTHON_CONFIG</code> to point to it.  For example,
+if you want your settings to be located in $HOME/ndfc-python-settings.yaml, then set:</p>
+<pre><code class="language-bash">export NDFC_PYTHON_CONFIG=$HOME/ndfc-python-settings.yaml
+</code></pre>
+<p>And edit this file to contain:</p>
+<pre><code class="language-yaml">---
+ansible_vault: '/path/to/your/ansible/vault/file'
+</code></pre>
+<h2 id="update-your-vault-with-keyvalues-specific-to-ndfc-python">Update your Vault with key/values specific to ndfc-python</h2>
+<p>Next, you'll need to edit your Ansible Vault file to add your Nexus Dashboard Controller
+credentials (username, password, and login domain) and ip address.</p>
+<p>We may also require the username and password for your switches in the future,
+so you might want to add this as well.</p>
+<pre><code class="language-bash">/path/to/your/ansible/vault/file 
+</code></pre>
+<p>It is recommended (but not mandatory) that you encrypt all passwords.  Below is one way to do this.</p>
+<h3 id="modify-pathtoyouransiblevaultfile">Modify /path/to/your/ansible/vault/file</h3>
+<h4 id="edit-ansible_password-password-for-ndfc-controller-and-device_password-password-for-nx-os-switches">Edit <code>ansible_password</code> (password for NDFC controller) and <code>device_password</code> (password for NX-OS switches)</h4>
+<p>Add <code>ansible_password</code> and <code>device_password</code> in encrypted format (or non-encrypted,
+if you don't care about security).  These are the passwords you use to login to your
+ND/NDFC Controller, and NX-OS switches, respectively.</p>
+<p>To add encrypted passwords for the ND/NDFC controller and NX-OS devices,
+issue the following from this repository's top-level directory.</p>
+<pre><code class="language-bash">ansible-vault encrypt_string 'mySuperSecretNdfcPassword' --name 'ansible_password' &gt;&gt; /path/to/your/ansible/vault/file
+echo &quot;&quot; &gt;&gt; /path/to/your/ansible/vault/file
+ansible-vault encrypt_string 'mySuperSecretNxosPassword' --name 'device_password' &gt;&gt; /path/to/your/ansible/vault/file
+echo &quot;&quot; &gt;&gt; /path/to/your/ansible/vault/file
+</code></pre>
+<p>ansible-vault will prompt you for a vault password, which you'll use to decrypt
+these passwords when running the example scripts.</p>
+<p>Example:</p>
+<pre><code class="language-bash">% ansible-vault encrypt_string 'mySuperSecretNdfcPassword' --name 'ansible_password' &gt;&gt; /path/to/your/ansible/vault/file
+New Vault password: 
+Confirm New Vault password: 
+%
+% echo &quot;&quot; &gt;&gt; /path/to/your/ansible/vault/file
+% cat /path/to/your/ansible/vault/file
+ansible_password: !vault |
+          $ANSIBLE_VAULT;1.1;AES256
+          35313565343034623966323832303764633165386439663133323832383336366362663431366565
+          6238373030393562363831616266336464353963393566300a316564663135323263653165393330
+          33353935396462663531323437336366653937326234313866623535313431366534363938633834
+          6563336634653963320a376364323430316134623430636265383561663631343763646465626365
+          36666366333438373537343033393939653830663061623362613439376161626439
+% 
+</code></pre>
+<p>If you don't care about security, you can add a non-encrypted password by editing the
+file directly. The following are example unencrypted passwords for the ND/NDFC controller
+and NX-OS devices added to this file:</p>
+<pre><code class="language-yaml">ansible_password: mySuperSecretNdfcPassword
+device_password: mySuperSecretNxosPassword
+</code></pre>
+<h4 id="add-the-domain-for-nexus-dashboard-controller-login">Add the domain for Nexus Dashboard Controller login</h4>
+<p>Change <code>nd_domain</code> in the same file to the domain associated with the above password
+that you're using on ND/NDFC.  If the "domain" field is not displayed when you login to
+the GUI, then use local, as shown below.</p>
+<pre><code class="language-yaml">nd_domain: local
+</code></pre>
+<h4 id="add-usernames-for-nexus-dashboard-controller-and-switches">Add usernames for Nexus Dashboard Controller and switches</h4>
+<p>Change <code>ansible_user</code> in the same file to the username associated with the above
+password that you're using on ND/NDFC.</p>
+<p>Change <code>device_username</code> in the same file to the username used to login to your
+NX-OS switches.</p>
+<p>Example:</p>
+<pre><code class="language-yaml">ansible_user: voldomort
+device_username: admin
+</code></pre>
+<h4 id="add-the-ip-address-of-your-nexus-dashboard-controller">Add the ip address of your Nexus Dashboard Controller</h4>
+<pre><code class="language-yaml">ndfc_ip: 192.168.1.1
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
