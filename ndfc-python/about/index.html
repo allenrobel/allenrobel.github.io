@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/classes/">
+        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/about/">
       
       
-        <link rel="prev" href="../ansible_vault/">
+        <link rel="prev" href="..">
       
       
-        <link rel="next" href="../scripts/">
+        <link rel="next" href="../ansible_vault/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,11 +22,14 @@
     
     
       
-        <title>Classes - ndfc-python</title>
+        <title>About - ndfc-python</title>
       
     
     
       <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -55,7 +58,12 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -64,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#classes" class="md-skip">
+        <a href="#about" class="md-skip">
           Skip to content
         </a>
       
@@ -100,15 +108,15 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Classes
+              About
             
           </span>
         </div>
       </div>
     </div>
     
+      
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -234,10 +242,30 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -246,6 +274,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -274,19 +331,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../classes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -295,7 +343,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -360,6 +407,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -376,70 +440,11 @@
   
 
 
-<h1 id="classes">Classes</h1>
-<p><code>*</code> indicates that a class has not yet been updated to work with RestSend().</p>
-<table>
-<thead>
-<tr>
-<th>Library</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/log_v2.py">Log</a></td>
-<td>Create the base ndfc_python logging object</td>
-</tr>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_credentials.py">NdfcCredentials</a></td>
-<td>Read the caller's Ansible Vault and provides the credentials therein to the other libraries</td>
-</tr>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_device_info.py">NdfcDeviceInfo</a></td>
-<td>Retrieve information about a switch</td>
-</tr>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_discover.py">NdfcDiscover</a></td>
-<td>Discover device</td>
-</tr>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_network.py">NdfcNetwork</a></td>
-<td><code>*</code> Create, delete networks</td>
-</tr>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_policy.py">NdfcPolicy</a></td>
-<td><code>*</code> Create / delete policies</td>
-</tr>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_python_config.py">NdfcPythonConfig</a></td>
-<td>Returns the contents of a YAML file as a dictionary, given a path to the file</td>
-</tr>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_python_logger.py">NdfcPythonLogger</a></td>
-<td>Configure logging for <code>ndfc-python</code> scripts</td>
-</tr>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_python_sender.py">NdfcPythonSender</a></td>
-<td>Instantiate and configure the Sender() class</td>
-</tr>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_reachability.py">NdfcReachability</a></td>
-<td><code>*</code> Test switch reachability (from NDFC controller perspective).</td>
-</tr>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/vrf_create.py">VrfCreate</a></td>
-<td>Create VRFs</td>
-</tr>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/validations.py">Validations</a></td>
-<td>Validation methods used by the other classes (deprecated)</td>
-</tr>
-<tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/yaml_reader.py">YamlReader</a></td>
-<td>Read a YAML file and return its contents as a python dict</td>
-</tr>
-</tbody>
-</table>
+<h1 id="about">About</h1>
+<h2 id="description">Description</h2>
+<p><a href="https://github.com/allenrobel/ndfc-python">ndfc-python</a> contains Python classes and
+example scripts for interacting with Cisco's Nexus Dashboard Fabric Controller (NDFC)
+via its REST API.</p>
 
 
 

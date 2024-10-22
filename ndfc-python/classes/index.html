@@ -8,23 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/">
+        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/classes/">
       
       
+        <link rel="prev" href="../ansible_vault/">
       
-        <link rel="next" href="about/">
+      
+        <link rel="next" href="../scripts/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
-        <title>ndfc-python</title>
+        <title>Classes - ndfc-python</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -43,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -53,7 +58,12 @@
   </head>
   
   
-    <body dir="ltr">
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-orange" data-md-color-accent="indigo">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -62,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#welcome-to-ndfc-python" class="md-skip">
+        <a href="#classes" class="md-skip">
           Skip to content
         </a>
       
@@ -78,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="ndfc-python" class="md-header__button md-logo" aria-label="ndfc-python" data-md-component="logo">
+    <a href=".." title="ndfc-python" class="md-header__button md-logo" aria-label="ndfc-python" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -98,15 +108,15 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Welcome to ndfc-python
+              Classes
             
           </span>
         </div>
       </div>
     </div>
     
+      
     
-      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
     
     
@@ -185,7 +195,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="ndfc-python" class="md-nav__button md-logo" aria-label="ndfc-python" data-md-component="logo">
+    <a href=".." title="ndfc-python" class="md-nav__button md-logo" aria-label="ndfc-python" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -212,19 +222,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -233,7 +234,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -245,7 +245,7 @@
   
   
     <li class="md-nav__item">
-      <a href="about/" class="md-nav__link">
+      <a href="../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -265,7 +265,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ansible_vault/" class="md-nav__link">
+      <a href="../ansible_vault/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -282,10 +282,19 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="classes/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -294,6 +303,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -305,7 +315,7 @@
   
   
     <li class="md-nav__item">
-      <a href="scripts/" class="md-nav__link">
+      <a href="../scripts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -325,7 +335,7 @@
   
   
     <li class="md-nav__item">
-      <a href="usage/" class="md-nav__link">
+      <a href="../usage/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -374,10 +384,70 @@
   
 
 
-<h1 id="welcome-to-ndfc-python">Welcome to ndfc-python</h1>
-<p><a href="https://github.com/allenrobel/ndfc-python">ndfc-python</a> contains Python classes and
-example scripts for interacting with Cisco's Nexus Dashboard Fabric Controller (NDFC)
-via its REST API.</p>
+<h1 id="classes">Classes</h1>
+<p><code>*</code> indicates that a class has not yet been updated to work with RestSend().</p>
+<table>
+<thead>
+<tr>
+<th>Library</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/log_v2.py">Log</a></td>
+<td>Create the base ndfc_python logging object</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_credentials.py">NdfcCredentials</a></td>
+<td>Read the caller's Ansible Vault and provides the credentials therein to the other libraries</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_device_info.py">NdfcDeviceInfo</a></td>
+<td>Retrieve information about a switch</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_discover.py">NdfcDiscover</a></td>
+<td>Discover device</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_network.py">NdfcNetwork</a></td>
+<td><code>*</code> Create, delete networks</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_policy.py">NdfcPolicy</a></td>
+<td><code>*</code> Create / delete policies</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_python_config.py">NdfcPythonConfig</a></td>
+<td>Returns the contents of a YAML file as a dictionary, given a path to the file</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_python_logger.py">NdfcPythonLogger</a></td>
+<td>Configure logging for <code>ndfc-python</code> scripts</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_python_sender.py">NdfcPythonSender</a></td>
+<td>Instantiate and configure the Sender() class</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/ndfc_reachability.py">NdfcReachability</a></td>
+<td><code>*</code> Test switch reachability (from NDFC controller perspective).</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/vrf_create.py">VrfCreate</a></td>
+<td>Create VRFs</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/validations.py">Validations</a></td>
+<td>Validation methods used by the other classes (deprecated)</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/yaml_reader.py">YamlReader</a></td>
+<td>Read a YAML file and return its contents as a python dict</td>
+</tr>
+</tbody>
+</table>
 
 
 
@@ -424,10 +494,10 @@ via its REST API.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
