@@ -740,6 +740,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       Usage
@@ -935,6 +953,24 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Methods
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    <span class="md-ellipsis">
+      Properties
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#usage" class="md-nav__link">
     <span class="md-ellipsis">
       Usage
@@ -1071,6 +1107,34 @@
 <li><code>TypeError</code></li>
 <li><code>develop</code> is not a boolean.</li>
 </ul>
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<dl>
+<dt><code>commit()</code></dt>
+<dd>
+<p>If <code>config</code> is None, disable logging.</p>
+<p>If <code>config</code> is a JSON file conformant with <code>logging.config.dictConfig</code>
+read the file and configure the base logger instance from the file's contents.</p>
+</dd>
+</dl>
+<h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
+<dl>
+<dt><code>config</code></dt>
+<dd>
+<p>Override the <code>NDFC_LOGGING_CONFIG</code> environment variable.  Value is an absolute
+path to a JSON file from which logging config is read.  The JSON file must
+conform to <code>logging.config.dictConfig</code> from Python's standard library.</p>
+<p>Type: str()</p>
+<p>Default: None</p>
+<p>Raises: None</p>
+</dd>
+<dt><code>develop</code></dt>
+<dd>
+<p>Disable or enable exceptions raised by the logging module.</p>
+<p>Type: bool()</p>
+<p>Default: False</p>
+<p>Raises: TypeError if value is not a bool()</p>
+</dd>
+</dl>
 <h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
 <p>By default, Log() does the following:</p>
 <ol>
