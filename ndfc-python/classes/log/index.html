@@ -718,6 +718,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See also
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#raises" class="md-nav__link">
     <span class="md-ellipsis">
       Raises
@@ -736,9 +745,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-module-code" class="md-nav__link">
+  <a href="#example-use-in-a-script" class="md-nav__link">
     <span class="md-ellipsis">
-      Example module code
+      Example use in a script
     </span>
   </a>
   
@@ -805,6 +814,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See also
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#raises" class="md-nav__link">
     <span class="md-ellipsis">
       Raises
@@ -823,9 +841,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-module-code" class="md-nav__link">
+  <a href="#example-use-in-a-script" class="md-nav__link">
     <span class="md-ellipsis">
-      Example module code
+      Example use in a script
     </span>
   </a>
   
@@ -861,6 +879,8 @@
 <h1 id="log"><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/log_v2.py">Log</a><a class="headerlink" href="#log" title="Permanent link">&para;</a></h1>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p>Create the base ndfc_python logging object</p>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
+<p>NdfcPythonLogger()</p>
 <h2 id="raises">Raises<a class="headerlink" href="#raises" title="Permanent link">&para;</a></h2>
 <ul>
 <li><code>ValueError</code> if:
@@ -884,130 +904,140 @@
     logging module itself.</li>
 </ol>
 <p>Hence, the simplest usage for Log() is:</p>
-<ul>
+<ol>
 <li>Set the environment variable <code>NDFC_LOGGING_CONFIG</code> to the
     path of the logging config file.  <code>bash</code> shell is used in the
     example below.</li>
-</ul>
-<pre><code class="language-bash">export NDFC_LOGGING_CONFIG=&quot;/path/to/logging_config.json&quot;
-</code></pre>
-<ul>
-<li>Instantiate a Log() object instance and call <code>commit()</code> on the instance:</li>
-</ul>
-<pre><code class="language-python">from ndfc_python.log_v2 import Log
-try:
-    log = Log()
-    log.commit()
-except ValueError as error:
-    # handle error
-</code></pre>
-<p>To later disable logging, unset the environment variable.
-<code>bash</code> shell is used in the example below.</p>
-<pre><code class="language-bash">unset NDFC_LOGGING_CONFIG
-</code></pre>
-<p>To enable exceptions from the logging module (not recommended, unless needed for
-development), set <code>develop</code> to True:</p>
-<pre><code class="language-python">from ndfc_python.log_v2 import Log
-try:
-    log = Log()
-    log.develop = True
-    log.commit()
-except ValueError as error:
-    # handle error
-</code></pre>
-<p>To directly set the path to the logging config file, overriding the
-<code>NDFC_LOGGING_CONFIG</code> environment variable, set the <code>config</code>
-property prior to calling <code>commit()</code>:</p>
-<pre><code class="language-python">from ndfc_python.log_v2 import Log
-try:
-    log = Log()
-    log.config = &quot;/path/to/logging_config.json&quot;
-    log.commit()
-except ValueError as error:
-    # handle error
-</code></pre>
+</ol>
+<div class="language-bash highlight"><span class="filename">set NDFC_LOGGING_CONFIG</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">NDFC_LOGGING_CONFIG</span><span class="o">=</span><span class="s2">&quot;/path/to/logging_config.json&quot;</span>
+</span></code></pre></div>
+<ol>
+<li>Instantiate a <code>Log()</code> object instance and call <code>commit()</code> on the instance:</li>
+</ol>
+<div class="language-py highlight"><span class="filename">instantiate Log()</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span> <span class="nn">logging</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">ndfc_python.log_v2</span> <span class="kn">import</span> <span class="n">Log</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="k">try</span><span class="p">:</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="n">logger</span> <span class="o">=</span> <span class="n">Log</span><span class="p">()</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="n">logger</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="c1"># handle error</span>
+</span></code></pre></div>
 <p>At this point, a base/parent logger is created for which all other
-loggers throughout the dcnm collection will be children.
-This allows for a single logging config to be used for all modules in the
-collection, and allows for the logging config to be specified in a
-single place external to the code.</p>
-<h2 id="example-module-code">Example module code<a class="headerlink" href="#example-module-code" title="Permanent link">&para;</a></h2>
-<p>In the main() function of a module.</p>
-<pre><code class="language-python">from ndfc_python.log_v2 import Log
-
-def main():
-    try:
-        log = Log()
-        log.commit()
-    except ValueError as error:
-        ansible_module.fail_json(msg=str(error))
-
-    task = AnsibleTask()
-</code></pre>
+loggers throughout <code>ndfc-python</code> will be children.</p>
+<ol>
+<li>Create a log instance under the <code>ndfc_python</code> logger and start logging.</li>
+</ol>
+<div class="language-py highlight"><span class="filename">Create log instance</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="s2">&quot;ndfc_python.myLogger&quot;</span><span class="p">)</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Logger created.&quot;</span><span class="p">)</span>
+</span></code></pre></div>
+<ol>
+<li>To disable logging for all children, unset the environment variable.</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nb">unset</span><span class="w"> </span>NDFC_LOGGING_CONFIG
+</span></code></pre></div>
+<ol>
+<li>To enable exceptions from the logging module (not recommended, unless needed for
+    development), set <code>develop</code> to True:</li>
+</ol>
+<div class="language-py highlight"><span class="filename">set log.develop</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kn">from</span> <span class="nn">ndfc_python.log_v2</span> <span class="kn">import</span> <span class="n">Log</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="k">try</span><span class="p">:</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>    <span class="n">log</span> <span class="o">=</span> <span class="n">Log</span><span class="p">()</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    <span class="n">log</span><span class="o">.</span><span class="n">develop</span> <span class="o">=</span> <span class="kc">True</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>    <span class="n">log</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>    <span class="c1"># handle error</span>
+</span></code></pre></div>
+<ol>
+<li>To directly set the path to the logging config file, overriding the
+    <code>NDFC_LOGGING_CONFIG</code> environment variable, set the <code>config</code>
+    property prior to calling <code>commit()</code>:</li>
+</ol>
+<div class="language-py highlight"><span class="filename">Override NDFC_LOGGING_CONFIG</span><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kn">from</span> <span class="nn">ndfc_python.log_v2</span> <span class="kn">import</span> <span class="n">Log</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="k">try</span><span class="p">:</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>    <span class="n">log</span> <span class="o">=</span> <span class="n">Log</span><span class="p">()</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    <span class="n">log</span><span class="o">.</span><span class="n">config</span> <span class="o">=</span> <span class="s2">&quot;/path/to/logging_config.json&quot;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>    <span class="n">log</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>    <span class="c1"># handle error</span>
+</span></code></pre></div>
+<h2 id="example-use-in-a-script">Example use in a script<a class="headerlink" href="#example-use-in-a-script" title="Permanent link">&para;</a></h2>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kn">from</span> <span class="nn">ndfc_python.log_v2</span> <span class="kn">import</span> <span class="n">Log</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>    <span class="k">try</span><span class="p">:</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>        <span class="n">log</span> <span class="o">=</span> <span class="n">Log</span><span class="p">()</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        <span class="n">log</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>    <span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="n">ansible_module</span><span class="o">.</span><span class="n">fail_json</span><span class="p">(</span><span class="n">msg</span><span class="o">=</span><span class="nb">str</span><span class="p">(</span><span class="n">error</span><span class="p">))</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>    <span class="n">task</span> <span class="o">=</span> <span class="n">AnsibleTask</span><span class="p">()</span>
+</span></code></pre></div>
 <p>In the AnsibleTask() class (or any other classes running in the
 main() function's call stack i.e. classes instantiated in either
 main() or in AnsibleTask()).</p>
-<pre><code class="language-python">class AnsibleTask:
-    def __init__(self):
-        self.class_name = self.__class__.__name__
-        self.log = logging.getLogger(f&quot;dcnm.{self.class_name}&quot;)
-    def some_method(self):
-        self.log.debug(&quot;This is a debug message.&quot;)
-</code></pre>
+<div class="language-python highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="k">class</span> <span class="nc">AnsibleTask</span><span class="p">:</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">class_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="o">.</span><span class="vm">__name__</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;dcnm.</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">class_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>    <span class="k">def</span> <span class="nf">some_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        <span class="bp">self</span><span class="o">.</span><span class="n">log</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;This is a debug message.&quot;</span><span class="p">)</span>
+</span></code></pre></div>
 <h2 id="logging-config-file">Logging Config File<a class="headerlink" href="#logging-config-file" title="Permanent link">&para;</a></h2>
-<p>The logging config file MUST conform to <code>logging.config.dictConfig</code>
+<p>The logging config file must conform to <code>logging.config.dictConfig</code>
 from Python's standard library.</p>
 <p>An example logging config file is shown below:</p>
-<pre><code class="language-json">{
-  &quot;version&quot;: 1,
-  &quot;formatters&quot;: {
-    &quot;standard&quot;: {
-      &quot;class&quot;: &quot;logging.Formatter&quot;,
-      &quot;format&quot;: &quot;%(asctime)s - %(levelname)s - [%(name)s.%(funcName)s.%(lineno)d] %(message)s&quot;
-    }
-  },
-  &quot;handlers&quot;: {
-    &quot;console&quot;: {
-        &quot;class&quot;: &quot;logging.StreamHandler&quot;,
-        &quot;formatter&quot;: &quot;standard&quot;,
-        &quot;stream&quot;  : &quot;ext://sys.stdout&quot;
-      },
-    &quot;file&quot;: {
-      &quot;class&quot;: &quot;logging.handlers.RotatingFileHandler&quot;,
-      &quot;formatter&quot;: &quot;standard&quot;,
-      &quot;filename&quot;: &quot;/tmp/ndfc-python.log&quot;,
-      &quot;mode&quot;: &quot;a&quot;,
-      &quot;encoding&quot;: &quot;utf-8&quot;,
-      &quot;maxBytes&quot;: 50000000,
-      &quot;backupCount&quot;: 4
-    }
-  },
-  &quot;loggers&quot;: {
-        &quot;ndfc_python&quot;: {
-        &quot;handlers&quot;: [
-            &quot;console&quot;,
-            &quot;file&quot;
-        ],
-        &quot;level&quot;: &quot;DEBUG&quot;,
-        &quot;propagate&quot;: false
-        },
-        &quot;dcnm&quot;: {
-            &quot;handlers&quot;: [
-            &quot;console&quot;,
-            &quot;file&quot;
-            ],
-            &quot;level&quot;: &quot;DEBUG&quot;,
-            &quot;propagate&quot;: false
-        },
-        &quot;root&quot;: {
-            &quot;level&quot;: &quot;INFO&quot;,
-            &quot;handlers&quot;: [
-            &quot;file&quot;
-            ]
-        }
-    }
-}
-</code></pre>
+<div class="language-json highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">  </span><span class="nt">&quot;formatters&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nt">&quot;standard&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">      </span><span class="nt">&quot;class&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logging.Formatter&quot;</span><span class="p">,</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">      </span><span class="nt">&quot;format&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;%(asctime)s - %(levelname)s - [%(name)s.%(funcName)s.%(lineno)d] %(message)s&quot;</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">  </span><span class="nt">&quot;handlers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="nt">&quot;console&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">        </span><span class="nt">&quot;class&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logging.StreamHandler&quot;</span><span class="p">,</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">        </span><span class="nt">&quot;formatter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;standard&quot;</span><span class="p">,</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="nt">&quot;stream&quot;</span><span class="w">  </span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ext://sys.stdout&quot;</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">      </span><span class="p">},</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">    </span><span class="nt">&quot;file&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">      </span><span class="nt">&quot;class&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;logging.handlers.RotatingFileHandler&quot;</span><span class="p">,</span>
+</span><span id="__span-8-17"><a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">      </span><span class="nt">&quot;formatter&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;standard&quot;</span><span class="p">,</span>
+</span><span id="__span-8-18"><a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">      </span><span class="nt">&quot;filename&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/tmp/ndfc-python.log&quot;</span><span class="p">,</span>
+</span><span id="__span-8-19"><a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">      </span><span class="nt">&quot;mode&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;a&quot;</span><span class="p">,</span>
+</span><span id="__span-8-20"><a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">      </span><span class="nt">&quot;encoding&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span>
+</span><span id="__span-8-21"><a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">      </span><span class="nt">&quot;maxBytes&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">50000000</span><span class="p">,</span>
+</span><span id="__span-8-22"><a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">      </span><span class="nt">&quot;backupCount&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span>
+</span><span id="__span-8-23"><a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-24"><a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">  </span><span class="p">},</span>
+</span><span id="__span-8-25"><a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">  </span><span class="nt">&quot;loggers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-26"><a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">        </span><span class="nt">&quot;ndfc_python&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-27"><a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">        </span><span class="nt">&quot;handlers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-8-28"><a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="w">            </span><span class="s2">&quot;console&quot;</span><span class="p">,</span>
+</span><span id="__span-8-29"><a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">            </span><span class="s2">&quot;file&quot;</span>
+</span><span id="__span-8-30"><a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">        </span><span class="p">],</span>
+</span><span id="__span-8-31"><a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="w">        </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DEBUG&quot;</span><span class="p">,</span>
+</span><span id="__span-8-32"><a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">        </span><span class="nt">&quot;propagate&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-8-33"><a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-8-34"><a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="w">        </span><span class="nt">&quot;dcnm&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-35"><a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="w">            </span><span class="nt">&quot;handlers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-8-36"><a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="w">            </span><span class="s2">&quot;console&quot;</span><span class="p">,</span>
+</span><span id="__span-8-37"><a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="w">            </span><span class="s2">&quot;file&quot;</span>
+</span><span id="__span-8-38"><a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="w">            </span><span class="p">],</span>
+</span><span id="__span-8-39"><a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="w">            </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;DEBUG&quot;</span><span class="p">,</span>
+</span><span id="__span-8-40"><a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="w">            </span><span class="nt">&quot;propagate&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+</span><span id="__span-8-41"><a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="w">        </span><span class="p">},</span>
+</span><span id="__span-8-42"><a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a><span class="w">        </span><span class="nt">&quot;root&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-43"><a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a><span class="w">            </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;INFO&quot;</span><span class="p">,</span>
+</span><span id="__span-8-44"><a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a><span class="w">            </span><span class="nt">&quot;handlers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+</span><span id="__span-8-45"><a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a><span class="w">            </span><span class="s2">&quot;file&quot;</span>
+</span><span id="__span-8-46"><a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a><span class="w">            </span><span class="p">]</span>
+</span><span id="__span-8-47"><a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-8-48"><a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a><span class="w">    </span><span class="p">}</span>
+</span><span id="__span-8-49"><a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a><span class="p">}</span>
+</span></code></pre></div>
 
 
 
@@ -1084,7 +1114,7 @@ from Python's standard library.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.code.copy", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
