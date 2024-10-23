@@ -6,12 +6,16 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
+        <meta name="description" content="Python classes and example scripts to interact with Cisco's Nexus Dashboard Fabric Controller">
+      
+      
+        <meta name="author" content="Allen Robel">
       
       
         <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/ansible_vault/">
       
       
-        <link rel="prev" href="../classes/">
+        <link rel="prev" href="../usage/">
       
       
       
@@ -121,20 +125,30 @@
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
       </label>
     
   
     
     
     
-    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
       </label>
     
   
@@ -290,6 +304,97 @@
   
   
   
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/clone-the-repositories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clone the repositories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../scripts/" class="md-nav__link">
         
@@ -331,7 +436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../classes/" class="md-nav__link">
+      <a href="../classes.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -646,14 +751,14 @@
   
 
 
-<h1 id="ansible-vault">Ansible Vault</h1>
+<h1 id="ansible-vault">Ansible Vault<a class="headerlink" href="#ansible-vault" title="Permanent link">&para;</a></h1>
 <p>ndfc-python can be modified to work with Ansible Vault, per below.</p>
-<h2 id="ansible-python-libraries">Ansible Python Libraries</h2>
+<h2 id="ansible-python-libraries">Ansible Python Libraries<a class="headerlink" href="#ansible-python-libraries" title="Permanent link">&para;</a></h2>
 <p>If you want to use Ansible Vault with ndfc-python, install Ansible.</p>
-<h3 id="example">Example</h3>
+<h3 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h3>
 <pre><code class="language-bash">pip install ansible
 </code></pre>
-<h2 id="config-file">Config File</h2>
+<h2 id="config-file">Config File<a class="headerlink" href="#config-file" title="Permanent link">&para;</a></h2>
 <p>To use these scripts and libraries with Ansible Vault, you'll need to update a common settings
 file and set the environment variable <code>NDFC_PYTHON_CONFIG</code> to point to it.  For example,
 if you want your settings to be located in $HOME/ndfc-python-settings.yaml, then set:</p>
@@ -663,7 +768,7 @@ if you want your settings to be located in $HOME/ndfc-python-settings.yaml, then
 <pre><code class="language-yaml">---
 ansible_vault: '/path/to/your/ansible/vault/file'
 </code></pre>
-<h2 id="update-your-vault-with-keyvalues-specific-to-ndfc-python">Update your Vault with key/values specific to ndfc-python</h2>
+<h2 id="update-your-vault-with-keyvalues-specific-to-ndfc-python">Update your Vault with key/values specific to ndfc-python<a class="headerlink" href="#update-your-vault-with-keyvalues-specific-to-ndfc-python" title="Permanent link">&para;</a></h2>
 <p>Next, you'll need to edit your Ansible Vault file to add your Nexus Dashboard Controller
 credentials (username, password, and login domain) and ip address.</p>
 <p>We may also require the username and password for your switches in the future,
@@ -671,8 +776,8 @@ so you might want to add this as well.</p>
 <pre><code class="language-bash">/path/to/your/ansible/vault/file 
 </code></pre>
 <p>It is recommended (but not mandatory) that you encrypt all passwords.  Below is one way to do this.</p>
-<h3 id="modify-pathtoyouransiblevaultfile">Modify /path/to/your/ansible/vault/file</h3>
-<h4 id="edit-ansible_password-password-for-ndfc-controller-and-device_password-password-for-nx-os-switches">Edit <code>ansible_password</code> (password for NDFC controller) and <code>device_password</code> (password for NX-OS switches)</h4>
+<h3 id="modify-pathtoyouransiblevaultfile">Modify /path/to/your/ansible/vault/file<a class="headerlink" href="#modify-pathtoyouransiblevaultfile" title="Permanent link">&para;</a></h3>
+<h4 id="edit-ansible_password-password-for-ndfc-controller-and-device_password-password-for-nx-os-switches">Edit <code>ansible_password</code> (password for NDFC controller) and <code>device_password</code> (password for NX-OS switches)<a class="headerlink" href="#edit-ansible_password-password-for-ndfc-controller-and-device_password-password-for-nx-os-switches" title="Permanent link">&para;</a></h4>
 <p>Add <code>ansible_password</code> and <code>device_password</code> in encrypted format (or non-encrypted,
 if you don't care about security).  These are the passwords you use to login to your
 ND/NDFC Controller, and NX-OS switches, respectively.</p>
@@ -707,13 +812,13 @@ and NX-OS devices added to this file:</p>
 <pre><code class="language-yaml">ansible_password: mySuperSecretNdfcPassword
 device_password: mySuperSecretNxosPassword
 </code></pre>
-<h4 id="add-the-domain-for-nexus-dashboard-controller-login">Add the domain for Nexus Dashboard Controller login</h4>
+<h4 id="add-the-domain-for-nexus-dashboard-controller-login">Add the domain for Nexus Dashboard Controller login<a class="headerlink" href="#add-the-domain-for-nexus-dashboard-controller-login" title="Permanent link">&para;</a></h4>
 <p>Change <code>nd_domain</code> in the same file to the domain associated with the above password
 that you're using on ND/NDFC.  If the "domain" field is not displayed when you login to
 the GUI, then use local, as shown below.</p>
 <pre><code class="language-yaml">nd_domain: local
 </code></pre>
-<h4 id="add-usernames-for-nexus-dashboard-controller-and-switches">Add usernames for Nexus Dashboard Controller and switches</h4>
+<h4 id="add-usernames-for-nexus-dashboard-controller-and-switches">Add usernames for Nexus Dashboard Controller and switches<a class="headerlink" href="#add-usernames-for-nexus-dashboard-controller-and-switches" title="Permanent link">&para;</a></h4>
 <p>Change <code>ansible_user</code> in the same file to the username associated with the above
 password that you're using on ND/NDFC.</p>
 <p>Change <code>device_username</code> in the same file to the username used to login to your
@@ -722,7 +827,7 @@ NX-OS switches.</p>
 <pre><code class="language-yaml">ansible_user: voldomort
 device_username: admin
 </code></pre>
-<h4 id="add-the-ip-address-of-your-nexus-dashboard-controller">Add the ip address of your Nexus Dashboard Controller</h4>
+<h4 id="add-the-ip-address-of-your-nexus-dashboard-controller">Add the ip address of your Nexus Dashboard Controller<a class="headerlink" href="#add-the-ip-address-of-your-nexus-dashboard-controller" title="Permanent link">&para;</a></h4>
 <pre><code class="language-yaml">ndfc_ip: 192.168.1.1
 </code></pre>
 
