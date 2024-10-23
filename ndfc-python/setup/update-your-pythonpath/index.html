@@ -12,24 +12,28 @@
         <meta name="author" content="Allen Robel">
       
       
-        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/usage/">
+        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/setup/update-your-pythonpath/">
       
       
+        <link rel="prev" href="../clone-the-repositories/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+        <link rel="next" href="../enable-logging/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
-        <title>Usage - ndfc-python</title>
+        <title>Update your PYTHONPATH - ndfc-python</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#usage" class="md-skip">
+        <a href="#update-your-pythonpath" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +94,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="ndfc-python" class="md-header__button md-logo" aria-label="ndfc-python" data-md-component="logo">
+    <a href="../.." title="ndfc-python" class="md-header__button md-logo" aria-label="ndfc-python" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +114,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Usage
+              Update your PYTHONPATH
             
           </span>
         </div>
@@ -233,7 +237,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="ndfc-python" class="md-nav__button md-logo" aria-label="ndfc-python" data-md-component="logo">
+    <a href="../.." title="ndfc-python" class="md-nav__button md-logo" aria-label="ndfc-python" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -263,7 +267,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -283,7 +287,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+      <a href="../../about/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -300,8 +304,10 @@
       
   
   
+    
   
   
+  
     
     
     
@@ -311,13 +317,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-          
-        
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
@@ -331,7 +335,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Setup
@@ -345,7 +349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/clone-the-repositories/" class="md-nav__link">
+      <a href="../clone-the-repositories/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -363,10 +367,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../setup/update-your-pythonpath.md" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -375,6 +388,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -387,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/enable-logging/" class="md-nav__link">
+      <a href="../enable-logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -408,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/running-the-example-scripts/" class="md-nav__link">
+      <a href="../running-the-example-scripts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -429,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../setup/using-ansible-vault/" class="md-nav__link">
+      <a href="../using-ansible-vault/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../scripts/" class="md-nav__link">
+      <a href="../../scripts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -477,7 +491,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../classes/" class="md-nav__link">
+      <a href="../../classes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -510,83 +524,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#to-clone-this-repository" class="md-nav__link">
-    <span class="md-ellipsis">
-      To clone this repository
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dependencies" class="md-nav__link">
-    <span class="md-ellipsis">
-      Dependencies
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Dependencies">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#dcnm-ansible-collection" class="md-nav__link">
-    <span class="md-ellipsis">
-      DCNM Ansible Collection
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#python-path" class="md-nav__link">
-    <span class="md-ellipsis">
-      Python Path
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#logging-configuration" class="md-nav__link">
-    <span class="md-ellipsis">
-      Logging configuration
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#running-the-example-scripts" class="md-nav__link">
-    <span class="md-ellipsis">
-      Running the example scripts
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ansible-vault" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ansible Vault
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -603,74 +540,14 @@
   
 
 
-<h1 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h1>
-<h2 id="to-clone-this-repository">To clone this repository<a class="headerlink" href="#to-clone-this-repository" title="Permanent link">&para;</a></h2>
-<pre><code class="language-bash">git clone https://github.com/allenrobel/ndfc-python.git
+<h1 id="update-your-pythonpath">Update your PYTHONPATH<a class="headerlink" href="#update-your-pythonpath" title="Permanent link">&para;</a></h1>
+<p>Update your PYTHONPATH to include both <code>ndfc-python</code> and <code>ansible-dcnm</code> repositories.</p>
+<pre><code class="language-bash">export PYTHONPATH=$PYTHONPATH:$HOME/repos/ndfc-python:$HOME/repos/ansible-dcnm
 </code></pre>
-<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
-<h3 id="dcnm-ansible-collection">DCNM Ansible Collection<a class="headerlink" href="#dcnm-ansible-collection" title="Permanent link">&para;</a></h3>
-<p>We depend on RestSend(), Sender() and other classes in this repository.</p>
-<p>To install:</p>
-<ol>
-<li><code>cd $HOME/repos</code> (or wherever you keep your repositories)</li>
-<li><code>git clone https://github.com/CiscoDevNet/ansible-dcnm.git</code></li>
-<li>For now, you need to switch to the <code>relative-imports</code> branch.</li>
-</ol>
-<pre><code class="language-bash">cd $HOME/repos/ansible-dcnm
-git switch relative-imports
-</code></pre>
-<ol>
-<li>Update your PYTHONPATH to include this repository</li>
-</ol>
-<pre><code class="language-bash">export PYTHONPATH=$PYTHONPATH:$HOME/repos/ansible-dcnm
-</code></pre>
-<p>With the above in place, imports from this repository will look like the following in your scripts.</p>
+<p>With the above in place, imports from the repository will look like the following in your scripts.</p>
 <pre><code class="language-python">from plugins.module_utils.common.rest_send import RestSend
 from plugins.module_utils.common.sender_requests import Sender
 </code></pre>
-<!---
-Commenting this section out until we have replaced the fabric scripts and libraries...
-
-## Fabric Characteristics
-
-The characteristics of the child/site fabrics are as follows (see also the included PDF for a topology).
-
-1. 2 Spine acting as Route Reflectors for all Leaf and Border Gateway
-2. 4 Leaf / VTEP (2 VPC pairs using fabric-peering for their virtual peer-link)
-3. 2 Border Gateway / VTEP
-4. 2 VRF: v1 and v2
-5. L3 (ipv4 / ipv6) connectivity between VRF v1 and v2 (import/export of route-targets)
-6. L2 connectivity within each VRF
-7. OSPF underlay
-8. VXLAN/EVPN Replication Mode: Ingress
-
-Spines and Leafs can be added/removed by updating the Common Role Variables described below.
-
--->
-
-<h2 id="python-path">Python Path<a class="headerlink" href="#python-path" title="Permanent link">&para;</a></h2>
-<p>Add this repository's library to your python path.  For example, in .bash_profile or .zprofile</p>
-<pre><code class="language-bash">export PYTHONPATH=${PYTHONPATH}:${HOME}/repos/ndfc-python/lib
-</code></pre>
-<h2 id="logging-configuration">Logging configuration<a class="headerlink" href="#logging-configuration" title="Permanent link">&para;</a></h2>
-<p>To enable logging, set the following environment variable.</p>
-<pre><code class="language-bash">export NDFC_LOGGING_CONFIG=/path/to/logging_config.json
-</code></pre>
-<p>This is a standard Pyton logging configuration file.  There is an example
-file in this repository at <code>lib/ndfc_python/logging_config.json</code></p>
-<h2 id="running-the-example-scripts">Running the example scripts<a class="headerlink" href="#running-the-example-scripts" title="Permanent link">&para;</a></h2>
-<pre><code class="language-bash">export PYTHONPATH=${PYTHONPATH}:/path/to/this/repo/ndfc-python/lib
-# optional - for Ansible Vault
-# export NDFC_PYTHON_CONFIG=/path/to/ndfc-python-settings.yaml
-# optional - to enable logging
-# export NDFC_LOGGING_CONFIG=/path/to/ndfc-python-logging-config.json
-
-py311) ~ % cd /top/level/directory/of/this/repo/examples
-(py311) examples % ./device_info.py --config config_device_info.yaml
-</code></pre>
-<p>If you're using Ansible Vault, you'll be prompted for the vault password.</p>
-<h2 id="ansible-vault">Ansible Vault<a class="headerlink" href="#ansible-vault" title="Permanent link">&para;</a></h2>
-<p><a href="ansible_vault.md">Usage for Ansible Vault</a></p>
 
 
 
@@ -717,10 +594,10 @@ py311) ~ % cd /top/level/directory/of/this/repo/examples
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.path"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.sections", "navigation.expand", "navigation.path"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
