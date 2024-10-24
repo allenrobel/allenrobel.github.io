@@ -680,6 +680,8 @@
       
         
       
+        
+      
     
     
       
@@ -762,6 +764,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../classes/NetworkCreate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NetworkCreate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../classes/NetworkDelete/" class="md-nav__link">
         
   
@@ -821,7 +844,7 @@
 
 <h1 id="update-your-pythonpath">Update your PYTHONPATH<a class="headerlink" href="#update-your-pythonpath" title="Permanent link">&para;</a></h1>
 <p>Update your PYTHONPATH to include both <code>ndfc-python</code> and <code>ansible-dcnm</code> repositories.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:<span class="nv">$HOME</span>/repos/ndfc-python:<span class="nv">$HOME</span>/repos/ansible-dcnm
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:<span class="nv">$HOME</span>/repos/ndfc-python/lib:<span class="nv">$HOME</span>/repos/ansible-dcnm
 </span></code></pre></div>
 <p>With the above in place, imports from the repository will look like the following in your scripts.</p>
 <div class="language-py highlight"><span class="filename">Example imports</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">plugins.module_utils.common.rest_send</span> <span class="kn">import</span> <span class="n">RestSend</span>
