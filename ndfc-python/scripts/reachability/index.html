@@ -12,13 +12,13 @@
         <meta name="author" content="Allen Robel">
       
       
-        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/setup/running-the-example-scripts/">
+        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/scripts/reachability/">
       
       
-        <link rel="prev" href="../enable-logging/">
+        <link rel="prev" href="../network_delete/">
       
       
-        <link rel="next" href="../using-ansible-vault/">
+        <link rel="next" href="../../classes/overview/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>Running the example scripts - ndfc-python</title>
+        <title>reachability.py - ndfc-python</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#running-the-example-scripts" class="md-skip">
+        <a href="#reachabilitypy" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Running the example scripts
+              reachability.py
             
           </span>
         </div>
@@ -244,13 +244,11 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
-        <a href="../clone-the-repositories/" class="md-tabs__link">
+      <li class="md-tabs__item">
+        <a href="../../setup/clone-the-repositories/" class="md-tabs__link">
           
   
     
@@ -266,11 +264,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../scripts/credentials/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../credentials/" class="md-tabs__link">
           
   
     
@@ -372,12 +372,178 @@
       
   
   
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Setup
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Setup
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/clone-the-repositories/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Clone the repositories
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/update-your-pythonpath/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Update your PYTHONPATH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/enable-logging/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Enable logging
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/running-the-example-scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Running the example scripts
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/using-ansible-vault/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Using Ansible Vault
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
     
   
   
   
     
     
+      
+        
       
         
       
@@ -404,24 +570,24 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
-    Setup
+    Scripts
   </span>
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_2">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
-            Setup
+            Scripts
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -432,11 +598,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../clone-the-repositories/" class="md-nav__link">
+      <a href="../credentials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Clone the repositories
+    credentials.py
   </span>
   
 
@@ -453,11 +619,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../update-your-pythonpath/" class="md-nav__link">
+      <a href="../device_info/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Update your PYTHONPATH
+    device_info.py
   </span>
   
 
@@ -474,11 +640,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../enable-logging/" class="md-nav__link">
+      <a href="../fabric_details/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Enable logging
+    fabric_details.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network_create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    network_create.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../network_delete/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    network_delete.py
   </span>
   
 
@@ -504,216 +712,18 @@
         
       
       
-      <a href="./" class="md-nav__link md-nav__link--active">
-        
-  
-  <span class="md-ellipsis">
-    Running the example scripts
-  </span>
-  
-
-      </a>
-      
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../using-ansible-vault/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Using Ansible Vault
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-          </ul>
-        </nav>
-      
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-        
-      
-    
-    
-      
-      
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
-        
+        <label class="md-nav__link md-nav__link--active" for="__toc">
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
-            
   
   <span class="md-ellipsis">
-    Scripts
+    reachability.py
   </span>
   
 
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_3">
-            <span class="md-nav__icon md-icon"></span>
-            Scripts
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../scripts/credentials/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    credentials.py
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../scripts/device_info/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    device_info.py
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../scripts/fabric_details/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    fabric_details.py
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../scripts/network_create/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    network_create.py
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../scripts/network_delete/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    network_delete.py
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../scripts/reachability/" class="md-nav__link">
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -722,6 +732,164 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-ansible-vault-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Ansible Vault keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expected Ansible Vault keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nd_domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd_domain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nd_ip4" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd_ip4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nd_password" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd_password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nd_username" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd_username
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nxos_password" class="md-nav__link">
+    <span class="md-ellipsis">
+      nxos_password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nxos_username" class="md-nav__link">
+    <span class="md-ellipsis">
+      nxos_username
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample output
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-ansible-vault-missing-expected-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failure - Ansible Vault missing expected content
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-ansible-vault-file-is-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failure - Ansible Vault file is missing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-fabric_name-does-not-exist-on-the-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failure - fabric_name does not exist on the controller
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -895,6 +1063,152 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#expected-ansible-vault-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Expected Ansible Vault keys
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Expected Ansible Vault keys">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nd_domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd_domain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nd_ip4" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd_ip4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nd_password" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd_password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nd_username" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd_username
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nxos_password" class="md-nav__link">
+    <span class="md-ellipsis">
+      nxos_password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nxos_username" class="md-nav__link">
+    <span class="md-ellipsis">
+      nxos_username
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sample-output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample output
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sample output">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#success" class="md-nav__link">
+    <span class="md-ellipsis">
+      Success
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-ansible-vault-missing-expected-content" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failure - Ansible Vault missing expected content
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-ansible-vault-file-is-missing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failure - Ansible Vault file is missing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#failure-fabric_name-does-not-exist-on-the-controller" class="md-nav__link">
+    <span class="md-ellipsis">
+      Failure - fabric_name does not exist on the controller
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -911,20 +1225,77 @@
   
 
 
-<h1 id="running-the-example-scripts">Running the example scripts<a class="headerlink" href="#running-the-example-scripts" title="Permanent link">&para;</a></h1>
-<p>An example configuration file for each script is located in
-<code>examples/config/config_&lt;script_name&gt;</code>,</p>
-<p>Some example configuration files contain only a subset of available parameters.
-See the documention for the class a script uses for a (more or less) complete
-listing of parameters.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>:/path/to/this/repo/ndfc-python/lib
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># optional - for Ansible Vault</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># export NDFC_PYTHON_CONFIG=/path/to/ndfc-python-settings.yaml</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># optional - to enable logging</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># export NDFC_LOGGING_CONFIG=/path/to/ndfc-python-logging-config.json</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>py311<span class="o">)</span><span class="w"> </span>~<span class="w"> </span>%<span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>/ndfc-python/examples
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="o">(</span>py311<span class="o">)</span><span class="w"> </span>examples<span class="w"> </span>%<span class="w"> </span>./device_info.py<span class="w"> </span>--config<span class="w"> </span>config/config_device_info.yaml
+<h1 id="reachabilitypy">reachability.py<a class="headerlink" href="#reachabilitypy" title="Permanent link">&para;</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p>Test for device reachability (from controller perspective).</p>
+<p>For now, this script requires Ansible to be installed since it uses Ansible
+Vault for credentials.</p>
+<p><code>pip install ansible</code></p>
+<p>We plan to rework this to support other credential sources soon, including
+environment variables and command line options.</p>
+<h2 id="expected-ansible-vault-keys">Expected Ansible Vault keys<a class="headerlink" href="#expected-ansible-vault-keys" title="Permanent link">&para;</a></h2>
+<p>The following keys are expected to be present in the Ansible Vault.
+An error will result if these are not present.</p>
+<h3 id="nd_domain">nd_domain<a class="headerlink" href="#nd_domain" title="Permanent link">&para;</a></h3>
+<p>Nexus Dashboard login domain</p>
+<h3 id="nd_ip4">nd_ip4<a class="headerlink" href="#nd_ip4" title="Permanent link">&para;</a></h3>
+<p>Nexus Dashboard IPv4 address</p>
+<h3 id="nd_password">nd_password<a class="headerlink" href="#nd_password" title="Permanent link">&para;</a></h3>
+<p>Nexus Dashboard password</p>
+<h3 id="nd_username">nd_username<a class="headerlink" href="#nd_username" title="Permanent link">&para;</a></h3>
+<p>Nexus Dashboard username</p>
+<h3 id="nxos_password">nxos_password<a class="headerlink" href="#nxos_password" title="Permanent link">&para;</a></h3>
+<p>NX-OS switches password.
+Used for Nexus Dashboard Fabric Contoller switch discovery</p>
+<h3 id="nxos_username">nxos_username<a class="headerlink" href="#nxos_username" title="Permanent link">&para;</a></h3>
+<p>NX-OS switches username.
+Used for Nexus Dashboard Fabric Contoller switch discovery</p>
+<h2 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./reachability.py<span class="w"> </span>--config/config_reachability.yaml<span class="w"> </span>--ansible-vault<span class="w"> </span><span class="nv">$HOME</span>/.ansible/vault
+</span></code></pre></div>
+<h2 id="sample-output">Sample output<a class="headerlink" href="#sample-output" title="Permanent link">&para;</a></h2>
+<h3 id="success">Success<a class="headerlink" href="#success" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./reachability.py<span class="w"> </span>--config<span class="w"> </span>prod/config_reachability.yaml<span class="w"> </span>--ansible-vault<span class="w"> </span><span class="nv">$HOME</span>/.ansible/vault
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Vault<span class="w"> </span>password:
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>auth:<span class="w"> </span>True
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>device_index:<span class="w"> </span>cvd-1314-leaf<span class="o">(</span>FDO211218FV<span class="o">)</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>hop_count:<span class="w"> </span><span class="m">0</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>ip_addr:<span class="w"> </span><span class="m">172</span>.22.150.105
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>known:<span class="w"> </span>True
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>last_change:<span class="w"> </span>None
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>platform:<span class="w"> </span>N9K-C93180YC-EX
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>reachable:<span class="w"> </span>True
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>selectable:<span class="w"> </span>False
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>serial_number:<span class="w"> </span>FDO211218FV
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>status_reason:<span class="w"> </span>already<span class="w"> </span>managed<span class="w"> </span><span class="k">in</span><span class="w"> </span>f1
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>switch_role:<span class="w"> </span>None
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>sys_name:<span class="w"> </span>cvd-1314-leaf
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>valid:<span class="w"> </span>True
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>vdc_id:<span class="w"> </span><span class="m">0</span>
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>vdc_mac:<span class="w"> </span>None
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>vendor:<span class="w"> </span>Cisco
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>version:<span class="w"> </span><span class="m">10</span>.2<span class="o">(</span><span class="m">5</span><span class="o">)</span>
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%
+</span></code></pre></div>
+<h3 id="failure-ansible-vault-missing-expected-content">Failure - Ansible Vault missing expected content<a class="headerlink" href="#failure-ansible-vault-missing-expected-content" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./reachability.py<span class="w"> </span>--config<span class="w"> </span>prod/config_reachability.yaml<span class="w"> </span>--ansible-vault<span class="w"> </span><span class="nv">$HOME</span>/.ansible/vault
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Vault<span class="w"> </span>password:
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>CredentialsAnsibleVault.commit:<span class="w"> </span>Exiting.<span class="w"> </span>ansible_vault<span class="w"> </span>is<span class="w"> </span>missing<span class="w"> </span>key<span class="w"> </span>nd_password.<span class="w"> </span>vault<span class="w"> </span>file:<span class="w"> </span>/Users/arobel/.ansible/vault
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%
+</span></code></pre></div>
+<h3 id="failure-ansible-vault-file-is-missing">Failure - Ansible Vault file is missing<a class="headerlink" href="#failure-ansible-vault-file-is-missing" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./reachability.py<span class="w"> </span>--config<span class="w"> </span>prod/config_reachability.yaml<span class="w"> </span>--ansible-vault<span class="w"> </span><span class="nv">$HOME</span>/does_not_exist
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Vault<span class="w"> </span>password:
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>Exiting.<span class="w"> </span>Error<span class="w"> </span>detail:<span class="w"> </span>CredentialsAnsibleVault.commit:<span class="w"> </span>Unable<span class="w"> </span>to<span class="w"> </span>load<span class="w"> </span>credentials<span class="w"> </span><span class="k">in</span><span class="w">  </span>/Users/arobel/does_not_exist.<span class="w"> </span>Exception<span class="w"> </span>detail:<span class="w"> </span>AnsibleFileNotFound:<span class="w"> </span>Unable<span class="w"> </span>to<span class="w"> </span>retrieve<span class="w"> </span>file<span class="w"> </span>contents
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>Could<span class="w"> </span>not<span class="w"> </span>find<span class="w"> </span>or<span class="w"> </span>access<span class="w"> </span><span class="s1">&#39;/Users/arobel/does_not_exist&#39;</span><span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>Ansible<span class="w"> </span>Controller.
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>If<span class="w"> </span>you<span class="w"> </span>are<span class="w"> </span>using<span class="w"> </span>a<span class="w"> </span>module<span class="w"> </span>and<span class="w"> </span>expect<span class="w"> </span>the<span class="w"> </span>file<span class="w"> </span>to<span class="w"> </span>exist<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>remote,<span class="w"> </span>see<span class="w"> </span>the<span class="w"> </span>remote_src<span class="w"> </span>option
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%
+</span></code></pre></div>
+<h3 id="failure-fabric_name-does-not-exist-on-the-controller">Failure - fabric_name does not exist on the controller<a class="headerlink" href="#failure-fabric_name-does-not-exist-on-the-controller" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./reachability.py<span class="w"> </span>--config<span class="w"> </span>prod/config_reachability.yaml<span class="w"> </span>--ansible-vault<span class="w"> </span><span class="nv">$HOME</span>/.ansible/vault
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Vault<span class="w"> </span>password:
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>Exiting.<span class="w"> </span>Error<span class="w"> </span>detail:<span class="w"> </span>Reachability.commit:<span class="w"> </span>fabric_name<span class="w"> </span>MyFabric<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>exist<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>controller.
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%
 </span></code></pre></div>
 
 
@@ -961,7 +1332,7 @@ listing of parameters.</p>
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../enable-logging/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Enable logging">
+          <a href="../network_delete/" class="md-footer__link md-footer__link--prev" aria-label="Previous: network_delete.py">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -971,20 +1342,20 @@ listing of parameters.</p>
                 Previous
               </span>
               <div class="md-ellipsis">
-                Enable logging
+                network_delete.py
               </div>
             </div>
           </a>
         
         
           
-          <a href="../using-ansible-vault/" class="md-footer__link md-footer__link--next" aria-label="Next: Using Ansible Vault">
+          <a href="../../classes/overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Overview">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Using Ansible Vault
+                Overview
               </div>
             </div>
             <div class="md-footer__button md-icon">
