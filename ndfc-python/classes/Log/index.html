@@ -553,6 +553,8 @@
       
         
       
+        
+      
     
     
       
@@ -656,6 +658,27 @@
   
   
     <li class="md-nav__item">
+      <a href="../../scripts/ndfc_raw_get_request/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ndfc_raw_get_request.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../scripts/network_create/" class="md-nav__link">
         
   
@@ -729,6 +752,8 @@
   
     
     
+      
+        
       
         
       
@@ -871,6 +896,30 @@
       Raises
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Raises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#valueerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      ValueError
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typeerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      TypeError
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1048,6 +1097,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Reachability/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Reachability
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -1105,6 +1175,30 @@
       Raises
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Raises">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#valueerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      ValueError
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#typeerror" class="md-nav__link">
+    <span class="md-ellipsis">
+      TypeError
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1255,21 +1349,15 @@
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
 <p>NdfcPythonLogger()</p>
 <h2 id="raises">Raises<a class="headerlink" href="#raises" title="Permanent link">&para;</a></h2>
-<ul>
-<li>
-<p><code>ValueError</code></p>
+<h3 id="valueerror"><code>ValueError</code><a class="headerlink" href="#valueerror" title="Permanent link">&para;</a></h3>
 <ul>
 <li>An error is encountered reading the logging config file.</li>
 <li>An error is encountered parsing the logging config file.</li>
 <li>No formatters are found in the logging config file that are associated with the configured handlers.</li>
 </ul>
-</li>
-<li>
-<p><code>TypeError</code></p>
+<h3 id="typeerror"><code>TypeError</code><a class="headerlink" href="#typeerror" title="Permanent link">&para;</a></h3>
 <ul>
 <li><code>develop</code> is not a boolean.</li>
-</ul>
-</li>
 </ul>
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
 <dl>
@@ -1333,7 +1421,7 @@ conform to <code>logging.config.dictConfig</code> from Python's standard library
 </span></code></pre></div>
 <h3 id="disable-logging">Disable logging<a class="headerlink" href="#disable-logging" title="Permanent link">&para;</a></h3>
 <p>To disable for all children, unset the environment variable.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">unset</span><span class="w"> </span>NDFC_LOGGING_CONFIG
+<div class="language-bash highlight"><span class="filename">Disable logging for all ndfc_python child loggers</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">unset</span><span class="w"> </span>NDFC_LOGGING_CONFIG
 </span></code></pre></div>
 <h3 id="enable-exceptions">Enable exceptions<a class="headerlink" href="#enable-exceptions" title="Permanent link">&para;</a></h3>
 <p>To enable exceptions from the logging module (not recommended, unless needed for development), set <code>develop</code> to True.</p>
