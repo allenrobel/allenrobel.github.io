@@ -12,9 +12,13 @@
         <meta name="author" content="Allen Robel">
       
       
-        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/setup/credentials/">
+        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/setup/set-credentials/">
       
       
+        <link rel="prev" href="../update-your-pythonpath/">
+      
+      
+        <link rel="next" href="../enable-logging/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +26,7 @@
     
     
       
-        <title>Credentials - ndfc-python</title>
+        <title>Set Credentials - ndfc-python</title>
       
     
     
@@ -108,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Credentials
+              Set Credentials
             
           </span>
         </div>
@@ -240,10 +244,12 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../clone-the-repositories/" class="md-tabs__link">
           
   
@@ -366,8 +372,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -381,22 +389,27 @@
       
         
       
+        
+      
     
     
+      
+        
+        
       
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -407,7 +420,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Setup
@@ -451,6 +464,214 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Set Credentials
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Set Credentials
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Environment variables
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Environment variables">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nd_domain" class="md-nav__link">
+    <span class="md-ellipsis">
+      ND_DOMAIN
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nd_ip4" class="md-nav__link">
+    <span class="md-ellipsis">
+      ND_IP4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nd_password" class="md-nav__link">
+    <span class="md-ellipsis">
+      ND_PASSWORD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nd_username" class="md-nav__link">
+    <span class="md-ellipsis">
+      ND_USERNAME
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nxos_password" class="md-nav__link">
+    <span class="md-ellipsis">
+      NXOS_PASSWORD
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nxos_username" class="md-nav__link">
+    <span class="md-ellipsis">
+      NXOS_USERNAME
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-command-line-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script command-line options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Script command-line options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nd_domain_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd_domain
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nd_ip4_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd_ip4
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nd_password_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd_password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nd_username_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      nd_username
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nxos_password_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      nxos_password
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nxos_username_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      nxos_username
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ansible-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ansible Vault
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1185,6 +1406,44 @@ an Ansible Vault.  See <a href="../using-ansible-vault/">Using Ansible Vault</a>
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../update-your-pythonpath/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Update your PYTHONPATH">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Update your PYTHONPATH
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../enable-logging/" class="md-footer__link md-footer__link--next" aria-label="Next: Enable logging">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Enable logging
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">
