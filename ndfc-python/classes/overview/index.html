@@ -958,6 +958,13 @@
 
 
 <h1 id="classes">Classes<a class="headerlink" href="#classes" title="Permanent link">&para;</a></h1>
+<p>As we work to modify code in the <code>ansible-dcnm</code> repository to remove direct
+dependencies on Ansible, we will leverage that code here.  <code>ndfc-python</code>
+serves secondarily as a testing ground for new code that may eventually
+find its way into <code>ansible-dcnm</code>.  The code behind the <code>dcnm_network</code>,
+<code>dcnm_vrf</code>, and <code>dcnm_policy</code> Ansible modules is currently tied at the
+hip to Ansible, so we are currently unable to leverage it.  We're using
+the libraries below for now.</p>
 <p><code>*</code> indicates that a class has not yet been updated to work with RestSend().</p>
 <table>
 <thead>
@@ -992,16 +999,16 @@
 <td>Instantiate and configure the Sender() class</td>
 </tr>
 <tr>
-<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/reachability.py">Reachability</a></td>
-<td>Switch reachability information (from controller perspective).</td>
-</tr>
-<tr>
 <td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/network_create.py">NetworkCreate</a></td>
 <td>Create networks</td>
 </tr>
 <tr>
 <td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/network_delete.py">NetworkDelete</a></td>
 <td>Delete networks</td>
+</tr>
+<tr>
+<td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/reachability.py">Reachability</a></td>
+<td>Switch reachability information (from controller perspective).</td>
 </tr>
 <tr>
 <td><a href="https://github.com/allenrobel/ndfc-python/blob/main/lib/ndfc_python/read_config.py">ReadConfig</a></td>
