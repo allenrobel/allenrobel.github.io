@@ -37,10 +37,6 @@
          <lastmod>2024-10-29</lastmod>
     </url>
     <url>
-         <loc>https://allenrobel.github.io/ndfc-python/scripts/ndfc_raw_get_request/</loc>
-         <lastmod>2024-10-29</lastmod>
-    </url>
-    <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/network_create/</loc>
          <lastmod>2024-10-29</lastmod>
     </url>
@@ -50,6 +46,14 @@
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/reachability/</loc>
+         <lastmod>2024-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://allenrobel.github.io/ndfc-python/scripts/rest_get_request/</loc>
+         <lastmod>2024-10-29</lastmod>
+    </url>
+    <url>
+         <loc>https://allenrobel.github.io/ndfc-python/scripts/rest_post_request/</loc>
          <lastmod>2024-10-29</lastmod>
     </url>
     <url>
