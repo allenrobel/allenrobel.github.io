@@ -1030,8 +1030,57 @@
 <p>If you want to enable script logging (optional), set the following environment variable.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">NDFC_LOGGING_CONFIG</span><span class="o">=</span><span class="nv">$HOME</span>/repos/ndfc-python/lib/ndfc_python/logging_config.json
 </span></code></pre></div>
-<p>This is a standard Pyton logging configuration file.  There is an example
-file in this repository at <code>lib/ndfc_python/logging_config.json</code></p>
+<p><code>NDFC_LOGGING_CONFIG</code> should point to a standard Pyton logging configuration file.  There is an example file in this repository at <code>lib/ndfc_python/logging_config.json</code>.  Below is the contents.</p>
+<p><code>json "Example logging configuration file"
+{
+  "version": 1,
+  "formatters": {
+    "standard": {
+      "class": "logging.Formatter",
+      "format": "%(asctime)s - %(levelname)s - [%(name)s.%(funcName)s.%(lineno)d] %(message)s"
+    }
+  },
+  "handlers": {
+    "console": {
+        "class": "logging.StreamHandler",
+        "formatter": "standard",
+        "stream"  : "ext://sys.stdout"
+      },
+    "file": {
+      "class": "logging.handlers.RotatingFileHandler",
+      "formatter": "standard",
+      "filename": "/tmp/ndfc-python.log",
+      "mode": "a",
+      "encoding": "utf-8",
+      "maxBytes": 50000000,
+      "backupCount": 4
+    }
+  },
+  "loggers": {
+        "ndfc_python": {
+        "handlers": [
+            "console",
+            "file"
+        ],
+        "level": "DEBUG",
+        "propagate": false
+        },
+        "dcnm": {
+            "handlers": [
+            "console",
+            "file"
+            ],
+            "level": "DEBUG",
+            "propagate": false
+        },
+        "root": {
+            "level": "INFO",
+            "handlers": [
+            "file"
+            ]
+        }
+    }
+}</code></p>
 
 
 

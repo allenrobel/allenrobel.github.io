@@ -1313,12 +1313,12 @@ and return the value of the credential from that source.</p>
 <h2 id="properties">Properties<a class="headerlink" href="#properties" title="Permanent link">&para;</a></h2>
 <h3 id="mandatory">Mandatory<a class="headerlink" href="#mandatory" title="Permanent link">&para;</a></h3>
 <h4 id="credential_name">credential_name<a class="headerlink" href="#credential_name" title="Permanent link">&para;</a></h4>
-<p>The name of the credential for which to retrieve the value.  See
+<p>The name of the credential from which to retrieve the value.  See
 <a href="../../setup/set-credentials/">Credentials</a> for the list of supported
 credential names.</p>
 <h4 id="script_args">script_args<a class="headerlink" href="#script_args" title="Permanent link">&para;</a></h4>
 <p>An instance of <code>parser.parse_args()</code> (from Python's <code>argparse</code> library)
-containing one or more <a href="../../setup/set-credentials/">Credentials</a>.</p>
+containing zero or more <a href="../../setup/set-credentials/">Credentials</a>.</p>
 <p>If <code>script_args</code> contains <code>ansible_vault</code> i.e. the user passed
 <code>--ansible-vault /path/to/vault</code> on the script command-line, then
 Ansible Vault is considered as a credential source and the script,
@@ -1341,8 +1341,10 @@ prioritizes them as follows:</p>
 good example in that it demonstrates how to read and use <code>nxos_password</code> and
 <code>nxos_username</code> in addition to the Nexus Dashboard credentials.</p>
 <h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
-<p><a href="../../setup/set-credentials/">Credentials</a>
-<a href="../../setup/running-the-example-scripts/">Running the example scripts</a></p>
+<ul>
+<li><a href="../../setup/set-credentials/">Credentials</a></li>
+<li><a href="../../setup/running-the-example-scripts/">Running the example scripts</a></li>
+</ul>
 
 
 
