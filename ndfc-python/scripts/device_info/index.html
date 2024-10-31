@@ -582,6 +582,8 @@
       
         
       
+        
+      
     
     
       
@@ -701,46 +703,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#example-configuration-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Example configuration file
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-config-file" class="md-nav__link">
+  <a href="#example-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Config File
+      Example Usage
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-output" class="md-nav__link">
+  <a href="#sample-failure-output" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample output
+      Sample failure output
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sample output">
+    <nav class="md-nav" aria-label="Sample failure output">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#success" class="md-nav__link">
+  <a href="#switch-does-not-exist" class="md-nav__link">
     <span class="md-ellipsis">
-      Success
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#failure-switch-does-not-exist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Failure - switch does not exist
+      Switch does not exist
     </span>
   </a>
   
@@ -877,6 +870,27 @@
   
   <span class="md-ellipsis">
     rest_post_request.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vrf_create/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    vrf_create.py
   </span>
   
 
@@ -1116,46 +1130,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
+  <a href="#example-configuration-file" class="md-nav__link">
     <span class="md-ellipsis">
-      Usage
+      Example configuration file
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#example-config-file" class="md-nav__link">
+  <a href="#example-usage" class="md-nav__link">
     <span class="md-ellipsis">
-      Example Config File
+      Example Usage
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#sample-output" class="md-nav__link">
+  <a href="#sample-failure-output" class="md-nav__link">
     <span class="md-ellipsis">
-      Sample output
+      Sample failure output
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Sample output">
+    <nav class="md-nav" aria-label="Sample failure output">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#success" class="md-nav__link">
+  <a href="#switch-does-not-exist" class="md-nav__link">
     <span class="md-ellipsis">
-      Success
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#failure-switch-does-not-exist" class="md-nav__link">
-    <span class="md-ellipsis">
-      Failure - switch does not exist
+      Switch does not exist
     </span>
   </a>
   
@@ -1187,34 +1192,40 @@
 <h1 id="device_infopy">device_info.py<a class="headerlink" href="#device_infopy" title="Permanent link">&para;</a></h1>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
 <p>Returns switch information for one or more switches.</p>
-<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./device_info.py<span class="w"> </span>--config<span class="w"> </span>config/config_device_info.yaml
+<h2 id="example-configuration-file">Example configuration file<a class="headerlink" href="#example-configuration-file" title="Permanent link">&para;</a></h2>
+<div class="language-yaml highlight"><span class="filename">config/config_device_info.yaml</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">config</span><span class="p">:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">switch_ip4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.1.1.2</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">switch_ip4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.1.1.3</span>
 </span></code></pre></div>
-<h2 id="example-config-file">Example Config File<a class="headerlink" href="#example-config-file" title="Permanent link">&para;</a></h2>
-<div class="language-yaml highlight"><span class="filename">config/config_device_info.yaml</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nn">---</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">config</span><span class="p">:</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">switch_ip4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.1.1.1</span>
-</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">switch_ip4</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.1.1.2</span>
+<h2 id="example-usage">Example Usage<a class="headerlink" href="#example-usage" title="Permanent link">&para;</a></h2>
+<p>The example below uses environment variables for credentials, so requires
+only the <code>--config</code> argument.  See <a href="../../setup/running-the-example-scripts/">Running the Example Scripts</a>
+for details around specifying credentials from the command line, from
+environment variables, from Ansible Vault, or a combination of these
+credentials sources.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_DOMAIN</span><span class="o">=</span><span class="nb">local</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_IP4</span><span class="o">=</span><span class="m">10</span>.1.1.1
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_PASSWORD</span><span class="o">=</span>MySecret
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_USERNAME</span><span class="o">=</span>admin
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>./device_info.py<span class="w"> </span>--config<span class="w"> </span>config/config_device_info.yaml
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>ipv4_address<span class="w"> </span><span class="m">10</span>.1.1.2
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span>serial_number:<span class="w"> </span>FDO123456AB
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span>fabric_name:<span class="w"> </span>f1
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span>status:<span class="w"> </span>ok
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">  </span>model:<span class="w"> </span>N9K-C93180YC-EX
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>ipv4_address<span class="w"> </span><span class="m">10</span>.1.1.3
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span>serial_number:<span class="w"> </span>FDO123456BC
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span>fabric_name:<span class="w"> </span>f1
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">  </span>status:<span class="w"> </span>ok
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">  </span>model:<span class="w"> </span>N9K-C93180YC-EX
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%
 </span></code></pre></div>
-<h2 id="sample-output">Sample output<a class="headerlink" href="#sample-output" title="Permanent link">&para;</a></h2>
-<h3 id="success">Success<a class="headerlink" href="#success" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><span class="filename">Success</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./device_info.py<span class="w"> </span>--config<span class="w"> </span>prod/config_device_info.yaml
-</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ipv4_address<span class="w"> </span><span class="m">10</span>.1.1.2
-</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span>serial_number:<span class="w"> </span>FDO123456AB
-</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span>fabric_name:<span class="w"> </span>f1
-</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span>status:<span class="w"> </span>ok
-</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span>model:<span class="w"> </span>N9K-C93180YC-EX
-</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>ipv4_address<span class="w"> </span><span class="m">10</span>.1.1.3
-</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span>serial_number:<span class="w"> </span>FDO123456BC
-</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span>fabric_name:<span class="w"> </span>f1
-</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span>status:<span class="w"> </span>ok
-</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span>model:<span class="w"> </span>N9K-C93180YC-EX
-</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%
-</span></code></pre></div>
-<h3 id="failure-switch-does-not-exist">Failure - switch does not exist<a class="headerlink" href="#failure-switch-does-not-exist" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><span class="filename">switch does not exist</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./device_info.py<span class="w"> </span>--config<span class="w"> </span>prod/config_device_info.yaml
-</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>switch<span class="w"> </span>details.<span class="w"> </span>Error<span class="w"> </span>details:<span class="w"> </span>SwitchDetails._get:<span class="w"> </span>Switch<span class="w"> </span>with<span class="w"> </span>ip_address<span class="w"> </span><span class="m">10</span>.1.1.4<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>exist<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>controller.
-</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%
+<h2 id="sample-failure-output">Sample failure output<a class="headerlink" href="#sample-failure-output" title="Permanent link">&para;</a></h2>
+<h3 id="switch-does-not-exist">Switch does not exist<a class="headerlink" href="#switch-does-not-exist" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><span class="filename">switch does not exist</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./device_info.py<span class="w"> </span>--config<span class="w"> </span>prod/config_device_info.yaml
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>switch<span class="w"> </span>details.<span class="w"> </span>Error<span class="w"> </span>details:<span class="w"> </span>SwitchDetails._get:<span class="w"> </span>Switch<span class="w"> </span>with<span class="w"> </span>ip_address<span class="w"> </span><span class="m">10</span>.1.1.2<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>exist<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>controller.
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%
 </span></code></pre></div>
 
 
