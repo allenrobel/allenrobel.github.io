@@ -809,6 +809,8 @@
       
         
       
+        
+      
     
     
       
@@ -857,6 +859,27 @@
   
   <span class="md-ellipsis">
     Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CredentialSelector/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CredentialSelector
   </span>
   
 
@@ -1284,10 +1307,10 @@
 </span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="kn">from</span> <span class="nn">ndfc_python.ndfc_python_sender</span> <span class="kn">import</span> <span class="n">NdfcPythonSender</span>
 </span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="kn">from</span> <span class="nn">ndfc_python.network_delete</span> <span class="kn">import</span> <span class="n">NetworkDelete</span>
 </span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="kn">from</span> <span class="nn">ndfc_python.parsers.parser_config</span> <span class="kn">import</span> <span class="n">parser_config</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="kn">from</span> <span class="nn">ndfc_python.parsers.parser_controller_domain</span> <span class="kn">import</span> <span class="n">parser_controller_domain</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="kn">from</span> <span class="nn">ndfc_python.parsers.parser_controller_ip4</span> <span class="kn">import</span> <span class="n">parser_controller_ip4</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="kn">from</span> <span class="nn">ndfc_python.parsers.parser_controller_password</span> <span class="kn">import</span> <span class="n">parser_controller_password</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="kn">from</span> <span class="nn">ndfc_python.parsers.parser_controller_username</span> <span class="kn">import</span> <span class="n">parser_controller_username</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="kn">from</span> <span class="nn">ndfc_python.parsers.parser_nd_domain</span> <span class="kn">import</span> <span class="n">parser_nd_domain</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="kn">from</span> <span class="nn">ndfc_python.parsers.parser_nd_ip4</span> <span class="kn">import</span> <span class="n">parser_nd_ip4</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="kn">from</span> <span class="nn">ndfc_python.parsers.parser_nd_password</span> <span class="kn">import</span> <span class="n">parser_nd_password</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="kn">from</span> <span class="nn">ndfc_python.parsers.parser_nd_username</span> <span class="kn">import</span> <span class="n">parser_nd_username</span>
 </span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="kn">from</span> <span class="nn">ndfc_python.parsers.parser_loglevel</span> <span class="kn">import</span> <span class="n">parser_loglevel</span>
 </span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="kn">from</span> <span class="nn">plugins.module_utils.common.response_handler</span> <span class="kn">import</span> <span class="n">ResponseHandler</span>
 </span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="kn">from</span> <span class="nn">plugins.module_utils.common.rest_send_v2</span> <span class="kn">import</span> <span class="n">RestSend</span>
@@ -1307,10 +1330,10 @@
 </span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>        <span class="n">parents</span><span class="o">=</span><span class="p">[</span>
 </span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a>            <span class="n">parser_config</span><span class="p">,</span>
 </span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a>            <span class="n">parser_loglevel</span><span class="p">,</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>            <span class="n">parser_controller_domain</span><span class="p">,</span>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>            <span class="n">parser_controller_ip4</span><span class="p">,</span>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>            <span class="n">parser_controller_password</span><span class="p">,</span>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>            <span class="n">parser_controller_username</span><span class="p">,</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a>            <span class="n">parser_nd_domain</span><span class="p">,</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>            <span class="n">parser_nd_ip4</span><span class="p">,</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a>            <span class="n">parser_nd_password</span><span class="p">,</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>            <span class="n">parser_nd_username</span><span class="p">,</span>
 </span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a>        <span class="p">],</span>
 </span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a>        <span class="n">description</span><span class="o">=</span><span class="s2">&quot;DESCRIPTION: Delete a network.&quot;</span><span class="p">,</span>
 </span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a>    <span class="p">)</span>
