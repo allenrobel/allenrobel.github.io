@@ -527,6 +527,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Running the example scripts
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -536,6 +547,76 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-script-invocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example script invocation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example script invocation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-command-line-for-all-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the command line for all credentials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-combination-of-command-line-and-environment-variables-for-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using a combination of command line and environment variables for credentials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-combination-of-command-line-environment-variables-and-ansible-vault-for-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using a combination of command line, environment variables, and Ansible Vault for credentials
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See also
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1010,6 +1091,65 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#example-script-invocation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example script invocation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Example script invocation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#using-the-command-line-for-all-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using the command line for all credentials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-combination-of-command-line-and-environment-variables-for-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using a combination of command line and environment variables for credentials
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#using-a-combination-of-command-line-environment-variables-and-ansible-vault-for-credentials" class="md-nav__link">
+    <span class="md-ellipsis">
+      Using a combination of command line, environment variables, and Ansible Vault for credentials
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#see-also" class="md-nav__link">
+    <span class="md-ellipsis">
+      See also
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1032,15 +1172,34 @@
 <p>Some example configuration files contain only a subset of available parameters.
 See the documention for the class a script uses for a (more or less) complete
 listing of parameters.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>:/path/to/this/repo/ndfc-python/lib
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># optional - for Ansible Vault</span>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># export NDFC_PYTHON_CONFIG=/path/to/ndfc-python-settings.yaml</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># optional - to enable logging</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1"># export NDFC_LOGGING_CONFIG=/path/to/ndfc-python-logging-config.json</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>py311<span class="o">)</span><span class="w"> </span>~<span class="w"> </span>%<span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>/ndfc-python/examples
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="o">(</span>py311<span class="o">)</span><span class="w"> </span>examples<span class="w"> </span>%<span class="w"> </span>./device_info.py<span class="w"> </span>--config<span class="w"> </span>config/config_device_info.yaml
+<h2 id="example-script-invocation">Example script invocation<a class="headerlink" href="#example-script-invocation" title="Permanent link">&para;</a></h2>
+<h3 id="using-the-command-line-for-all-credentials">Using the command line for all credentials<a class="headerlink" href="#using-the-command-line-for-all-credentials" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><span class="filename">Using command line arguments</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>:/path/to/this/repo/ndfc-python/lib
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># optional - to enable logging</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># export NDFC_LOGGING_CONFIG=/path/to/ndfc-python-logging-config.json</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>py311<span class="o">)</span><span class="w"> </span>~<span class="w"> </span>%<span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>/ndfc-python/examples
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="o">(</span>py311<span class="o">)</span><span class="w"> </span>examples<span class="w"> </span>%<span class="w"> </span>./device_info.py<span class="w"> </span>--config<span class="w"> </span>config/config_device_info.yaml<span class="w"> </span>--nd-password<span class="w"> </span>MyNdPassword<span class="w"> </span>--nd-username<span class="w"> </span>admin<span class="w"> </span>--nd-domain<span class="w"> </span><span class="nb">local</span><span class="w"> </span>--nd-ip4<span class="w"> </span><span class="m">10</span>.1.1.1
 </span></code></pre></div>
+<h3 id="using-a-combination-of-command-line-and-environment-variables-for-credentials">Using a combination of command line and environment variables for credentials<a class="headerlink" href="#using-a-combination-of-command-line-and-environment-variables-for-credentials" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><span class="filename">Using command line and environment</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>:/path/to/this/repo/ndfc-python/lib
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_PASSWORD</span><span class="o">=</span>MyNdPassword
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_DOMAIN</span><span class="o">=</span><span class="nb">local</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>py311<span class="o">)</span><span class="w"> </span>~<span class="w"> </span>%<span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>/ndfc-python/examples
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="o">(</span>py311<span class="o">)</span><span class="w"> </span>examples<span class="w"> </span>%<span class="w"> </span>./device_info.py<span class="w"> </span>--config<span class="w"> </span>config/config_device_info.yaml<span class="w"> </span>--nd-username<span class="w"> </span>admin<span class="w"> </span>--nd-ip4<span class="w"> </span><span class="m">10</span>.1.1.1
+</span></code></pre></div>
+<h3 id="using-a-combination-of-command-line-environment-variables-and-ansible-vault-for-credentials">Using a combination of command line, environment variables, and Ansible Vault for credentials<a class="headerlink" href="#using-a-combination-of-command-line-environment-variables-and-ansible-vault-for-credentials" title="Permanent link">&para;</a></h3>
+<p>Below, we assume that <code>$HOME/.ansible/vault</code> contains <code>nd_password</code> and <code>nd_domain</code>.</p>
+<div class="language-bash highlight"><span class="filename">Using command line and environment</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="si">${</span><span class="nv">PYTHONPATH</span><span class="si">}</span>:/path/to/this/repo/ndfc-python/lib
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_IP4</span><span class="o">=</span><span class="m">10</span>.1.1.1
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>py311<span class="o">)</span><span class="w"> </span>~<span class="w"> </span>%<span class="w"> </span><span class="nb">cd</span><span class="w"> </span><span class="nv">$HOME</span>/ndfc-python/examples
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="o">(</span>py311<span class="o">)</span><span class="w"> </span>examples<span class="w"> </span>%<span class="w"> </span>./device_info.py<span class="w"> </span>--config<span class="w"> </span>config/config_device_info.yaml<span class="w"> </span>--nd-username<span class="w"> </span>admin<span class="w"> </span>--ansible-vault<span class="w"> </span><span class="nv">$HOME</span>/.ansible/vault
+</span></code></pre></div>
+<h2 id="see-also">See also<a class="headerlink" href="#see-also" title="Permanent link">&para;</a></h2>
+<p><a href="../set-credentials/">List of ndfc-python credentials</a>
+<a href="../using-ansible-vault/">Using Ansible Vault</a></p>
 
 
 
