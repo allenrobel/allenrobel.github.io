@@ -1,0 +1,2341 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Ansible modules for interacting with Cisco's Nexus Dashboard Fabric Controller (formerly DCNM)">
+      
+      
+        <meta name="author" content="Allen Robel">
+      
+      
+        <link rel="canonical" href="https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_fabric/msd/">
+      
+      
+        <link rel="prev" href="../lan-classic/">
+      
+      
+        <link rel="next" href="../vxlan-evpn/">
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Multisite Domain (MSD) Fabric - dcnm-docpoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#anycast_gw_mac" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="dcnm-docpoc" class="md-header__button md-logo" aria-label="dcnm-docpoc" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            dcnm-docpoc
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Multisite Domain (MSD) Fabric
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1M8 13h8v-2H8zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4a5 5 0 0 0 5-5 5 5 0 0 0-5-5"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to system preference"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Switch to system preference" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5M7 15a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/allenrobel/dcnm-docpoc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    allenrobel/dcnm-docpoc
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Home
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../installation/ansible-galaxy/" class="md-tabs__link">
+          
+  
+    
+  
+  Installation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../plugins/action/" class="md-tabs__link">
+          
+  
+    
+  
+  Plugins
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../isn/" class="md-tabs__link">
+          
+  
+    
+  
+  Modules
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="dcnm-docpoc" class="md-nav__button md-logo" aria-label="dcnm-docpoc" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    dcnm-docpoc
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/allenrobel/dcnm-docpoc" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    allenrobel/dcnm-docpoc
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Installation
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Installation
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation/ansible-galaxy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ansible Galaxy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation/dcnm-and-ndfc-version-compatibility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    NDFC Version Compatibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation/ansible-version-compatibility/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ansible Version Compatibility
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../installation/supported-connections/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Supported Connections
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Plugins
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Plugins
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/action/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Action
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../plugins/httpapi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    HTTPAPI
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Modules
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Modules
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4_1" id="__nav_4_1_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_fabric
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4_1">
+            <span class="md-nav__icon md-icon"></span>
+            cisco.dcnm.dcnm_fabric
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../isn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Intersite Network (ISN) Fabric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../lan-classic/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LAN Classic Fabric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Multisite Domain (MSD) Fabric
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Multisite Domain (MSD) Fabric
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anycast_gw_mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANYCAST_GW_MAC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bgp_rp_asn" class="md-nav__link">
+    <span class="md-ellipsis">
+      BGP_RP_ASN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bgw_routing_tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      BGW_ROUTING_TAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#border_gwy_connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      BORDER_GWY_CONNECTIONS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudsec_algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLOUDSEC_ALGORITHM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudsec_autoconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLOUDSEC_AUTOCONFIG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudsec_enforcement" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLOUDSEC_ENFORCEMENT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudsec_key_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLOUDSEC_KEY_STRING
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudsec_report_timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLOUDSEC_REPORT_TIMER
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dci_subnet_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCI_SUBNET_RANGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dci_subnet_target_mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCI_SUBNET_TARGET_MASK
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delay_restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELAY_RESTORE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      DEPLOY
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable_bgp_bfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENABLE_BGP_BFD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable_bgp_log_neighbor_change" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENABLE_BGP_LOG_NEIGHBOR_CHANGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable_bgp_send_comm" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENABLE_BGP_SEND_COMM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable_pvlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENABLE_PVLAN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable_rs_redist_direct" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENABLE_RS_REDIST_DIRECT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fabric_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      FABRIC_NAME
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fabric_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      FABRIC_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l2_segment_id_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      L2_SEGMENT_ID_RANGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l3_partition_id_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      L3_PARTITION_ID_RANGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loopback100_ip_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      LOOPBACK100_IP_RANGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms_ifc_bgp_auth_key_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      MS_IFC_BGP_AUTH_KEY_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms_ifc_bgp_password" class="md-nav__link">
+    <span class="md-ellipsis">
+      MS_IFC_BGP_PASSWORD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms_ifc_bgp_password_enable" class="md-nav__link">
+    <span class="md-ellipsis">
+      MS_IFC_BGP_PASSWORD_ENABLE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms_loopback_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      MS_LOOPBACK_ID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms_underlay_autoconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      MS_UNDERLAY_AUTOCONFIG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rp_server_ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      RP_SERVER_IP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rs_routing_tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      RS_ROUTING_TAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tor_auto_deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      TOR_AUTO_DEPLOY
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default_network" class="md-nav__link">
+    <span class="md-ellipsis">
+      default_network
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default_pvlan_sec_network" class="md-nav__link">
+    <span class="md-ellipsis">
+      default_pvlan_sec_network
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default_vrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      default_vrf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enablescheduledbackup" class="md-nav__link">
+    <span class="md-ellipsis">
+      enableScheduledBackup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network_extension_template" class="md-nav__link">
+    <span class="md-ellipsis">
+      network_extension_template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduledtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      scheduledTime
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vrf_extension_template" class="md-nav__link">
+    <span class="md-ellipsis">
+      vrf_extension_template
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../vxlan-evpn/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    VXLAN/EVPN Fabric
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_image_policy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_image_policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_image_upgrade.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_image_upgrade
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_image_upload.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_image_upload
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_interface.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_interface
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_inventory.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_inventory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_links.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_links
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_maintenance_mode.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_maintenance_mode
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_network.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_network
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_policy.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_resource_manager.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_resource_manager
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_rest.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_rest
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_service_node.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_service_node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_service_policy.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_service_policy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_service_route_peering.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_service_route_peering
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_template.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_template
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_vpc_pair.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_vpc_pair
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dcnm_vrf.md" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_vrf
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#anycast_gw_mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      ANYCAST_GW_MAC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bgp_rp_asn" class="md-nav__link">
+    <span class="md-ellipsis">
+      BGP_RP_ASN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bgw_routing_tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      BGW_ROUTING_TAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#border_gwy_connections" class="md-nav__link">
+    <span class="md-ellipsis">
+      BORDER_GWY_CONNECTIONS
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudsec_algorithm" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLOUDSEC_ALGORITHM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudsec_autoconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLOUDSEC_AUTOCONFIG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudsec_enforcement" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLOUDSEC_ENFORCEMENT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudsec_key_string" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLOUDSEC_KEY_STRING
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cloudsec_report_timer" class="md-nav__link">
+    <span class="md-ellipsis">
+      CLOUDSEC_REPORT_TIMER
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dci_subnet_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCI_SUBNET_RANGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dci_subnet_target_mask" class="md-nav__link">
+    <span class="md-ellipsis">
+      DCI_SUBNET_TARGET_MASK
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#delay_restore" class="md-nav__link">
+    <span class="md-ellipsis">
+      DELAY_RESTORE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      DEPLOY
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable_bgp_bfd" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENABLE_BGP_BFD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable_bgp_log_neighbor_change" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENABLE_BGP_LOG_NEIGHBOR_CHANGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable_bgp_send_comm" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENABLE_BGP_SEND_COMM
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable_pvlan" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENABLE_PVLAN
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enable_rs_redist_direct" class="md-nav__link">
+    <span class="md-ellipsis">
+      ENABLE_RS_REDIST_DIRECT
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fabric_name" class="md-nav__link">
+    <span class="md-ellipsis">
+      FABRIC_NAME
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fabric_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      FABRIC_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l2_segment_id_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      L2_SEGMENT_ID_RANGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#l3_partition_id_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      L3_PARTITION_ID_RANGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#loopback100_ip_range" class="md-nav__link">
+    <span class="md-ellipsis">
+      LOOPBACK100_IP_RANGE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms_ifc_bgp_auth_key_type" class="md-nav__link">
+    <span class="md-ellipsis">
+      MS_IFC_BGP_AUTH_KEY_TYPE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms_ifc_bgp_password" class="md-nav__link">
+    <span class="md-ellipsis">
+      MS_IFC_BGP_PASSWORD
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms_ifc_bgp_password_enable" class="md-nav__link">
+    <span class="md-ellipsis">
+      MS_IFC_BGP_PASSWORD_ENABLE
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms_loopback_id" class="md-nav__link">
+    <span class="md-ellipsis">
+      MS_LOOPBACK_ID
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ms_underlay_autoconfig" class="md-nav__link">
+    <span class="md-ellipsis">
+      MS_UNDERLAY_AUTOCONFIG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rp_server_ip" class="md-nav__link">
+    <span class="md-ellipsis">
+      RP_SERVER_IP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rs_routing_tag" class="md-nav__link">
+    <span class="md-ellipsis">
+      RS_ROUTING_TAG
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tor_auto_deploy" class="md-nav__link">
+    <span class="md-ellipsis">
+      TOR_AUTO_DEPLOY
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default_network" class="md-nav__link">
+    <span class="md-ellipsis">
+      default_network
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default_pvlan_sec_network" class="md-nav__link">
+    <span class="md-ellipsis">
+      default_pvlan_sec_network
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#default_vrf" class="md-nav__link">
+    <span class="md-ellipsis">
+      default_vrf
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enablescheduledbackup" class="md-nav__link">
+    <span class="md-ellipsis">
+      enableScheduledBackup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network_extension_template" class="md-nav__link">
+    <span class="md-ellipsis">
+      network_extension_template
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduledtime" class="md-nav__link">
+    <span class="md-ellipsis">
+      scheduledTime
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vrf_extension_template" class="md-nav__link">
+    <span class="md-ellipsis">
+      vrf_extension_template
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+  <h1>Multisite Domain (MSD) Fabric</h1>
+
+<h4 id="anycast_gw_mac">ANYCAST_GW_MAC<a class="headerlink" href="#anycast_gw_mac" title="Permanent link">&para;</a></h4>
+<p>Shared MAC address for all leaves</p>
+<ul>
+<li>default: 2020.0000.00aa</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="bgp_rp_asn">BGP_RP_ASN<a class="headerlink" href="#bgp_rp_asn" title="Permanent link">&para;</a></h4>
+<p>1-4294967295 | 1-65535.0-65535, e.g. 65000, 65001</p>
+<ul>
+<li>default: </li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="bgw_routing_tag">BGW_ROUTING_TAG<a class="headerlink" href="#bgw_routing_tag" title="Permanent link">&para;</a></h4>
+<p>Routing tag associated with IP address of loopback and DCI interfaces</p>
+<ul>
+<li>default: 54321</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="border_gwy_connections">BORDER_GWY_CONNECTIONS<a class="headerlink" href="#border_gwy_connections" title="Permanent link">&para;</a></h4>
+<p>Manual, Auto Overlay EVPN Peering to Route Servers, Auto Overlay EVPN Direct Peering to Border Gateways</p>
+<ul>
+<li>default: Manual</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="cloudsec_algorithm">CLOUDSEC_ALGORITHM<a class="headerlink" href="#cloudsec_algorithm" title="Permanent link">&para;</a></h4>
+<p>AES_128_CMAC or AES_256_CMAC</p>
+<ul>
+<li>default: AES_128_CMAC</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="cloudsec_autoconfig">CLOUDSEC_AUTOCONFIG<a class="headerlink" href="#cloudsec_autoconfig" title="Permanent link">&para;</a></h4>
+<p>Auto Config CloudSec on Border Gateways</p>
+<ul>
+<li>default: 0</li>
+<li>example: NA</li>
+<li>type: bool</li>
+</ul>
+<h4 id="cloudsec_enforcement">CLOUDSEC_ENFORCEMENT<a class="headerlink" href="#cloudsec_enforcement" title="Permanent link">&para;</a></h4>
+<p>If set to strict, data across site must be encrypted.</p>
+<ul>
+<li>default: </li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="cloudsec_key_string">CLOUDSEC_KEY_STRING<a class="headerlink" href="#cloudsec_key_string" title="Permanent link">&para;</a></h4>
+<p>Cisco Type 7 Encrypted Octet String</p>
+<ul>
+<li>default: </li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="cloudsec_report_timer">CLOUDSEC_REPORT_TIMER<a class="headerlink" href="#cloudsec_report_timer" title="Permanent link">&para;</a></h4>
+<p>CloudSec Operational Status periodic report timer in minutes</p>
+<ul>
+<li>default: 5</li>
+<li>example: NA</li>
+<li>type: int</li>
+</ul>
+<h4 id="dci_subnet_range">DCI_SUBNET_RANGE<a class="headerlink" href="#dci_subnet_range" title="Permanent link">&para;</a></h4>
+<p>Address range to assign P2P DCI Links</p>
+<ul>
+<li>default: 10.10.1.0/24</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="dci_subnet_target_mask">DCI_SUBNET_TARGET_MASK<a class="headerlink" href="#dci_subnet_target_mask" title="Permanent link">&para;</a></h4>
+<p>Target Mask for Subnet Range </p>
+<ul>
+<li>default: 30</li>
+<li>example: NA</li>
+<li>type: int</li>
+</ul>
+<h4 id="delay_restore">DELAY_RESTORE<a class="headerlink" href="#delay_restore" title="Permanent link">&para;</a></h4>
+<p>Multi-Site underlay and overlay control plane convergence time  in seconds</p>
+<ul>
+<li>default: 300</li>
+<li>example: NA</li>
+<li>type: int</li>
+</ul>
+<h4 id="deploy">DEPLOY<a class="headerlink" href="#deploy" title="Permanent link">&para;</a></h4>
+<p>Save and deploy the fabric configuration.</p>
+<ul>
+<li>default: False</li>
+<li>example: NA</li>
+<li>type: bool</li>
+</ul>
+<h4 id="enable_bgp_bfd">ENABLE_BGP_BFD<a class="headerlink" href="#enable_bgp_bfd" title="Permanent link">&para;</a></h4>
+<p>For auto-created Multi-Site Underlay IFCs</p>
+<ul>
+<li>default: 0</li>
+<li>example: NA</li>
+<li>type: bool</li>
+</ul>
+<h4 id="enable_bgp_log_neighbor_change">ENABLE_BGP_LOG_NEIGHBOR_CHANGE<a class="headerlink" href="#enable_bgp_log_neighbor_change" title="Permanent link">&para;</a></h4>
+<p>For auto-created Multi-Site Underlay IFCs</p>
+<ul>
+<li>default: 0</li>
+<li>example: NA</li>
+<li>type: bool</li>
+</ul>
+<h4 id="enable_bgp_send_comm">ENABLE_BGP_SEND_COMM<a class="headerlink" href="#enable_bgp_send_comm" title="Permanent link">&para;</a></h4>
+<p>For auto-created Multi-Site Underlay IFCs</p>
+<ul>
+<li>default: 0</li>
+<li>example: NA</li>
+<li>type: bool</li>
+</ul>
+<h4 id="enable_pvlan">ENABLE_PVLAN<a class="headerlink" href="#enable_pvlan" title="Permanent link">&para;</a></h4>
+<p>Enable PVLAN on MSD and its child fabrics</p>
+<ul>
+<li>default: 0</li>
+<li>example: NA</li>
+<li>type: bool</li>
+</ul>
+<h4 id="enable_rs_redist_direct">ENABLE_RS_REDIST_DIRECT<a class="headerlink" href="#enable_rs_redist_direct" title="Permanent link">&para;</a></h4>
+<p>For auto-created Multi-Site overlay IFCs in Route Servers. Applicable only when Multi-Site Overlay IFC Deployment Method is Centralized_To_Route_Server.</p>
+<ul>
+<li>default: 0</li>
+<li>example: NA</li>
+<li>type: bool</li>
+</ul>
+<h4 id="fabric_name">FABRIC_NAME<a class="headerlink" href="#fabric_name" title="Permanent link">&para;</a></h4>
+<p>Please provide the fabric name to create it (Max Size 64)</p>
+<ul>
+<li>default: </li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="fabric_type">FABRIC_TYPE<a class="headerlink" href="#fabric_type" title="Permanent link">&para;</a></h4>
+<p>The type of fabric.</p>
+<ul>
+<li>default: None</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="l2_segment_id_range">L2_SEGMENT_ID_RANGE<a class="headerlink" href="#l2_segment_id_range" title="Permanent link">&para;</a></h4>
+<p>Overlay Network Identifier Range </p>
+<ul>
+<li>default: 30000-49000</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="l3_partition_id_range">L3_PARTITION_ID_RANGE<a class="headerlink" href="#l3_partition_id_range" title="Permanent link">&para;</a></h4>
+<p>Overlay VRF Identifier Range </p>
+<ul>
+<li>default: 50000-59000</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="loopback100_ip_range">LOOPBACK100_IP_RANGE<a class="headerlink" href="#loopback100_ip_range" title="Permanent link">&para;</a></h4>
+<p>Typically Loopback100 IP Address Range</p>
+<ul>
+<li>default: 10.10.0.0/24</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="ms_ifc_bgp_auth_key_type">MS_IFC_BGP_AUTH_KEY_TYPE<a class="headerlink" href="#ms_ifc_bgp_auth_key_type" title="Permanent link">&para;</a></h4>
+<p>BGP Key Encryption Type: 3 - 3DES, 7 - Cisco</p>
+<ul>
+<li>default: 3</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="ms_ifc_bgp_password">MS_IFC_BGP_PASSWORD<a class="headerlink" href="#ms_ifc_bgp_password" title="Permanent link">&para;</a></h4>
+<p>Encrypted eBGP Password Hex String</p>
+<ul>
+<li>default: </li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="ms_ifc_bgp_password_enable">MS_IFC_BGP_PASSWORD_ENABLE<a class="headerlink" href="#ms_ifc_bgp_password_enable" title="Permanent link">&para;</a></h4>
+<p>eBGP password for Multi-Site underlay/overlay IFCs</p>
+<ul>
+<li>default: 0</li>
+<li>example: NA</li>
+<li>type: bool</li>
+</ul>
+<h4 id="ms_loopback_id">MS_LOOPBACK_ID<a class="headerlink" href="#ms_loopback_id" title="Permanent link">&para;</a></h4>
+<p>No description available</p>
+<ul>
+<li>default: 100</li>
+<li>example: NA</li>
+<li>type: int</li>
+</ul>
+<h4 id="ms_underlay_autoconfig">MS_UNDERLAY_AUTOCONFIG<a class="headerlink" href="#ms_underlay_autoconfig" title="Permanent link">&para;</a></h4>
+<p>No description available</p>
+<ul>
+<li>default: 0</li>
+<li>example: NA</li>
+<li>type: bool</li>
+</ul>
+<h4 id="rp_server_ip">RP_SERVER_IP<a class="headerlink" href="#rp_server_ip" title="Permanent link">&para;</a></h4>
+<p>Multi-Site Route-Server peer list (typically loopback IP address on Route-Server for Multi-Site EVPN peering with BGWs), e.g. 128.89.0.1, 128.89.0.2</p>
+<ul>
+<li>default: </li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="rs_routing_tag">RS_ROUTING_TAG<a class="headerlink" href="#rs_routing_tag" title="Permanent link">&para;</a></h4>
+<p>Routing tag associated with Route Server IP for redistribute direct. This is the IP used in eBGP EVPN peering.</p>
+<ul>
+<li>default: 54321</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="tor_auto_deploy">TOR_AUTO_DEPLOY<a class="headerlink" href="#tor_auto_deploy" title="Permanent link">&para;</a></h4>
+<p>Enables Overlay VLANs on uplink between ToRs and Leafs</p>
+<ul>
+<li>default: 0</li>
+<li>example: NA</li>
+<li>type: bool</li>
+</ul>
+<h4 id="default_network">default_network<a class="headerlink" href="#default_network" title="Permanent link">&para;</a></h4>
+<p>Default Overlay Network Template For Leafs</p>
+<ul>
+<li>default: Default_Network_Universal</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="default_pvlan_sec_network">default_pvlan_sec_network<a class="headerlink" href="#default_pvlan_sec_network" title="Permanent link">&para;</a></h4>
+<p>Default PVLAN Secondary Network Template</p>
+<ul>
+<li>default: Pvlan_Secondary_Network</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="default_vrf">default_vrf<a class="headerlink" href="#default_vrf" title="Permanent link">&para;</a></h4>
+<p>Default Overlay VRF Template For Leafs</p>
+<ul>
+<li>default: Default_VRF_Universal</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="enablescheduledbackup">enableScheduledBackup<a class="headerlink" href="#enablescheduledbackup" title="Permanent link">&para;</a></h4>
+<p>Backup at the specified time. Note: Fabric Backup/Restore functionality is being deprecated for MSD fabrics. Recommendation is to use NDFC Backup &amp; Restore</p>
+<ul>
+<li>default: </li>
+<li>example: NA</li>
+<li>type: bool</li>
+</ul>
+<h4 id="network_extension_template">network_extension_template<a class="headerlink" href="#network_extension_template" title="Permanent link">&para;</a></h4>
+<p>Default Overlay Network Template For Borders</p>
+<ul>
+<li>default: Default_Network_Extension_Universal</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="scheduledtime">scheduledTime<a class="headerlink" href="#scheduledtime" title="Permanent link">&para;</a></h4>
+<p>Time (UTC) in 24hr format. (00:00 to 23:59)</p>
+<ul>
+<li>default: </li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+<h4 id="vrf_extension_template">vrf_extension_template<a class="headerlink" href="#vrf_extension_template" title="Permanent link">&para;</a></h4>
+<p>Default Overlay VRF Template For Borders</p>
+<ul>
+<li>default: Default_VRF_Extension_Universal</li>
+<li>example: NA</li>
+<li>type: str</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../lan-classic/" class="md-footer__link md-footer__link--prev" aria-label="Previous: LAN Classic Fabric">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                LAN Classic Fabric
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../vxlan-evpn/" class="md-footer__link md-footer__link--next" aria-label="Next: VXLAN/EVPN Fabric">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                VXLAN/EVPN Fabric
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.annotate", "content.code.copy", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
