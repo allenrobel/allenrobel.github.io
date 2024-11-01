@@ -1069,6 +1069,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    cisco.dcnm.dcnm_rest
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1078,6 +1089,67 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    <span class="md-ellipsis">
+      method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path" class="md-nav__link">
+    <span class="md-ellipsis">
+      path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1237,6 +1309,56 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#method" class="md-nav__link">
+    <span class="md-ellipsis">
+      method
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#path" class="md-nav__link">
+    <span class="md-ellipsis">
+      path
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data" class="md-nav__link">
+    <span class="md-ellipsis">
+      data
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1254,6 +1376,47 @@
 
 
 <h1 id="dcnm_rest">dcnm_rest<a class="headerlink" href="#dcnm_rest" title="Permanent link">&para;</a></h1>
+<div class="language-text highlight"><pre><span></span><code>- short_description
+    - Send REST API requests to DCNM controller.
+- version_added
+    - 0.9.0
+- description
+    - Send REST API requests to DCNM controller.
+- author
+    - Mike Wiebe (@mikewiebe)
+</code></pre></div>
+<h2 id="options">options<a class="headerlink" href="#options" title="Permanent link">&para;</a></h2>
+<h3 id="method">method<a class="headerlink" href="#method" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code>- description
+    - REST API Method
+- required
+    - true
+- type
+    - str
+- choices
+    - GET
+    - POST
+    - PUT
+    - DELETE
+</code></pre></div>
+<h3 id="path">path<a class="headerlink" href="#path" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code>- description
+    - REST API Path Endpoint
+- required
+    - true
+- type
+    - str
+</code></pre></div>
+<h3 id="data">data<a class="headerlink" href="#data" title="Permanent link">&para;</a></h3>
+<div class="language-text highlight"><pre><span></span><code>- description
+    - Additional data in JSON or TEXT to include with the REST API call
+- aliases
+    - json_data
+- required
+    - false
+- type
+    - raw
+</code></pre></div>
 
 
 
