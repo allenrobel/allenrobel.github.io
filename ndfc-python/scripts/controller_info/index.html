@@ -12,26 +12,28 @@
         <meta name="author" content="Allen Robel">
       
       
-        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/">
+        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/scripts/controller_info/">
       
       
+        <link rel="prev" href="../../setup/using-ansible-vault/">
       
-        <link rel="next" href="setup/clone-the-repositories/">
+      
+        <link rel="next" href="../credentials/">
       
       
-      <link rel="icon" href="assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.42">
     
     
       
-        <title>ndfc-python</title>
+        <title>controller_info.py - ndfc-python</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.0253249f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +52,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -76,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#home" class="md-skip">
+        <a href="#controller_infopy" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +92,7 @@
 
 <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="ndfc-python" class="md-header__button md-logo" aria-label="ndfc-python" data-md-component="logo">
+    <a href="../.." title="ndfc-python" class="md-header__button md-logo" aria-label="ndfc-python" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Home
+              controller_info.py
             
           </span>
         </div>
@@ -225,11 +227,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="." class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -248,7 +248,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="setup/clone-the-repositories/" class="md-tabs__link">
+        <a href="../../setup/clone-the-repositories/" class="md-tabs__link">
           
   
     
@@ -264,11 +264,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="scripts/controller_info/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -288,7 +290,7 @@
     
     
       <li class="md-tabs__item">
-        <a href="classes/overview/" class="md-tabs__link">
+        <a href="../../classes/overview/" class="md-tabs__link">
           
   
     
@@ -323,7 +325,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="ndfc-python" class="md-nav__button md-logo" aria-label="ndfc-python" data-md-component="logo">
+    <a href="../.." title="ndfc-python" class="md-nav__button md-logo" aria-label="ndfc-python" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -350,19 +352,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -371,7 +364,6 @@
   
 
       </a>
-      
     </li>
   
 
@@ -437,7 +429,7 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/clone-the-repositories/" class="md-nav__link">
+      <a href="../../setup/clone-the-repositories/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -458,7 +450,7 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/update-your-pythonpath/" class="md-nav__link">
+      <a href="../../setup/update-your-pythonpath/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -479,7 +471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/set-credentials/" class="md-nav__link">
+      <a href="../../setup/set-credentials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -500,7 +492,7 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/enable-logging/" class="md-nav__link">
+      <a href="../../setup/enable-logging/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -521,7 +513,7 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/running-the-example-scripts/" class="md-nav__link">
+      <a href="../../setup/running-the-example-scripts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -542,7 +534,7 @@
   
   
     <li class="md-nav__item">
-      <a href="setup/using-ansible-vault/" class="md-nav__link">
+      <a href="../../setup/using-ansible-vault/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -567,8 +559,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -595,19 +589,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -618,7 +615,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Scripts
@@ -629,10 +626,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="scripts/controller_info/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    controller_info.py
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -641,6 +658,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -653,7 +717,7 @@
   
   
     <li class="md-nav__item">
-      <a href="scripts/credentials/" class="md-nav__link">
+      <a href="../credentials/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,7 +738,7 @@
   
   
     <li class="md-nav__item">
-      <a href="scripts/device_info/" class="md-nav__link">
+      <a href="../device_info/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -695,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="scripts/fabric_details/" class="md-nav__link">
+      <a href="../fabric_details/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -716,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="scripts/network_create/" class="md-nav__link">
+      <a href="../network_create/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -737,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="scripts/network_delete/" class="md-nav__link">
+      <a href="../network_delete/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -758,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="scripts/reachability/" class="md-nav__link">
+      <a href="../reachability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -779,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="scripts/rest_get_request/" class="md-nav__link">
+      <a href="../rest_get_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -800,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="scripts/rest_post_request/" class="md-nav__link">
+      <a href="../rest_post_request/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -821,7 +885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="scripts/vrf_create/" class="md-nav__link">
+      <a href="../vrf_create/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -903,7 +967,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/overview/" class="md-nav__link">
+      <a href="../../classes/overview/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -924,7 +988,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/CredentialSelector/" class="md-nav__link">
+      <a href="../../classes/CredentialSelector/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -945,7 +1009,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/Log/" class="md-nav__link">
+      <a href="../../classes/Log/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -966,7 +1030,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/NetworkCreate/" class="md-nav__link">
+      <a href="../../classes/NetworkCreate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -987,7 +1051,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/NetworkDelete/" class="md-nav__link">
+      <a href="../../classes/NetworkDelete/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1008,7 +1072,7 @@
   
   
     <li class="md-nav__item">
-      <a href="classes/Reachability/" class="md-nav__link">
+      <a href="../../classes/Reachability/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1049,6 +1113,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#output" class="md-nav__link">
+    <span class="md-ellipsis">
+      Output
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1065,10 +1164,41 @@
   
 
 
-<h1 id="home">Home<a class="headerlink" href="#home" title="Permanent link">&para;</a></h1>
-<p><a href="https://github.com/allenrobel/ndfc-python">ndfc-python</a> contains Python classes and
-example scripts for interacting with Cisco's Nexus Dashboard Fabric Controller (NDFC)
-via its REST API.</p>
+<h1 id="controller_infopy"><a href="https://github.com/allenrobel/ndfc-python/blob/main/examples/controller_info.py">controller_info.py</a><a class="headerlink" href="#controller_infopy" title="Permanent link">&para;</a></h1>
+<h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
+<p>Return controller information (version, etc).</p>
+<h2 id="usage">Usage<a class="headerlink" href="#usage" title="Permanent link">&para;</a></h2>
+<ol>
+<li>See credentials.py for various options to set credentials.</li>
+<li>Run the script (we're using command-line for credentials below).</li>
+</ol>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>./controller_info.py<span class="w"> </span>--nd_username<span class="w"> </span>admin<span class="w"> </span>--nd_password<span class="w"> </span>MyPassword<span class="w"> </span>--nd_domain<span class="w"> </span><span class="nb">local</span><span class="w"> </span>--nd_ip4<span class="w"> </span><span class="m">10</span>.1.1.1
+</span></code></pre></div>
+<h2 id="output">Output<a class="headerlink" href="#output" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>arobel@AROBEL-M-G793<span class="w"> </span>examples<span class="w"> </span>%<span class="w"> </span>./controller_version.py<span class="w"> </span>--nd-domain<span class="w"> </span><span class="nb">local</span><span class="w"> </span>--nd-ip4<span class="w"> </span><span class="m">10</span>.1.1.1<span class="w"> </span>--nd-password<span class="w"> </span>MyPassword<span class="w"> </span>--nd-username<span class="w"> </span>admin
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Controller<span class="w"> </span>information:
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="m">12</span>.2.2.238<span class="w">      </span>Full<span class="w"> </span>version
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="m">12</span><span class="w">              </span>Major<span class="w"> </span>version
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="m">2</span><span class="w">               </span>Minor<span class="w"> </span>version
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="m">2</span><span class="w">               </span>Patch<span class="w"> </span>version
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>False<span class="w">           </span>Development<span class="w"> </span>version
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>LAN<span class="w">             </span>Mode
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>False<span class="w">           </span>Upgrade<span class="w"> </span><span class="k">in</span><span class="w"> </span>progress
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>False<span class="w">           </span>Media<span class="w"> </span>Controller
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>False<span class="w">           </span>High<span class="w"> </span>Availability<span class="w"> </span>enabled
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>EASYFABRIC<span class="w">      </span>Install
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>Raw<span class="w"> </span>response:
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="o">{</span>
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="s2">&quot;dev&quot;</span>:<span class="w"> </span>false,
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">    </span><span class="s2">&quot;install&quot;</span>:<span class="w"> </span><span class="s2">&quot;EASYFABRIC&quot;</span>,
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="s2">&quot;isHaEnabled&quot;</span>:<span class="w"> </span>false,
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="s2">&quot;isMediaController&quot;</span>:<span class="w"> </span>false,
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">    </span><span class="s2">&quot;is_upgrade_inprogress&quot;</span>:<span class="w"> </span>false,
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">    </span><span class="s2">&quot;mode&quot;</span>:<span class="w"> </span><span class="s2">&quot;LAN&quot;</span>,
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">    </span><span class="s2">&quot;uuid&quot;</span>:<span class="w"> </span><span class="s2">&quot;&quot;</span>,
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">    </span><span class="s2">&quot;version&quot;</span>:<span class="w"> </span><span class="s2">&quot;12.2.2.238&quot;</span>
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="o">}</span>
+</span></code></pre></div>
 
 
 
@@ -1103,15 +1233,31 @@ via its REST API.</p>
       
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
+          
+          <a href="../../setup/using-ansible-vault/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Using Ansible Vault">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Using Ansible Vault
+              </div>
+            </div>
+          </a>
+        
         
           
-          <a href="setup/clone-the-repositories/" class="md-footer__link md-footer__link--next" aria-label="Next: Clone the repositories">
+          <a href="../credentials/" class="md-footer__link md-footer__link--next" aria-label="Next: credentials.py">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                Clone the repositories
+                credentials.py
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1145,10 +1291,10 @@ via its REST API.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["content.code.annotate", "content.code.copy", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "toc.follow"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "content.code.copy", "navigation.footer", "navigation.indexes", "navigation.sections", "navigation.tabs", "navigation.top", "navigation.tracking", "toc.follow"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.83f73b43.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
       
     
   </body>
