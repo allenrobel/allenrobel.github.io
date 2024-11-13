@@ -1099,7 +1099,8 @@
 <p>Update your PYTHONPATH to include both <code>ndfc-python</code> and <code>ansible-dcnm</code> repositories.</p>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">export</span><span class="w"> </span><span class="nv">PYTHONPATH</span><span class="o">=</span><span class="nv">$PYTHONPATH</span>:<span class="nv">$HOME</span>/repos/ndfc-python/lib:<span class="nv">$HOME</span>/repos/ansible-dcnm
 </span></code></pre></div>
-<p>With the above in place, imports from the repository will look like the following in your scripts.</p>
+<p>With the above in place, imports from the <code>ansible-dcnmn</code> repository will look
+like the following in your <code>ndfc-python</code> scripts.</p>
 <div class="language-py highlight"><span class="filename">Example imports</span><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span> <span class="nn">plugins.module_utils.common.rest_send</span> <span class="kn">import</span> <span class="n">RestSend</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span> <span class="nn">plugins.module_utils.common.sender_requests</span> <span class="kn">import</span> <span class="n">Sender</span>
 </span></code></pre></div>
