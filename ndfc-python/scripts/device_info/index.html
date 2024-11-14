@@ -588,6 +588,8 @@
       
         
       
+        
+      
     
     
       
@@ -764,6 +766,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#invalid-ip-address-in-config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invalid ip address in config file
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -811,6 +822,27 @@
   
   <span class="md-ellipsis">
     maintenance_mode.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../maintenance_mode_info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    maintenance_mode_info.py
   </span>
   
 
@@ -1212,6 +1244,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#invalid-ip-address-in-config-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Invalid ip address in config file
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1272,6 +1313,13 @@ credentials sources.</p>
 <div class="language-bash highlight"><span class="filename">switch does not exist</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./device_info.py<span class="w"> </span>--config<span class="w"> </span>prod/config_device_info.yaml
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Unable<span class="w"> </span>to<span class="w"> </span>get<span class="w"> </span>switch<span class="w"> </span>details.<span class="w"> </span>Error<span class="w"> </span>details:<span class="w"> </span>SwitchDetails._get:<span class="w"> </span>Switch<span class="w"> </span>with<span class="w"> </span>ip_address<span class="w"> </span><span class="m">10</span>.1.1.2<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>exist<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>controller.
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%
+</span></code></pre></div>
+<h3 id="invalid-ip-address-in-config-file">Invalid ip address in config file<a class="headerlink" href="#invalid-ip-address-in-config-file" title="Permanent link">&para;</a></h3>
+<div class="language-bash highlight"><span class="filename">Invalid switch_ip4 value in --config</span><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./device_info.py<span class="w"> </span>--config<span class="w"> </span>prod/config_device_info.yaml
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="m">1</span><span class="w"> </span>validation<span class="w"> </span>error<span class="w"> </span><span class="k">for</span><span class="w"> </span>DeviceInfoConfigValidator
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>config.0.switch_ip4
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span>Input<span class="w"> </span>is<span class="w"> </span>not<span class="w"> </span>a<span class="w"> </span>valid<span class="w"> </span>IPv4<span class="w"> </span>address<span class="w"> </span><span class="o">[</span><span class="nv">type</span><span class="o">=</span>ip_v4_address,<span class="w"> </span><span class="nv">input_value</span><span class="o">=</span><span class="s1">&#39;foo&#39;</span>,<span class="w"> </span><span class="nv">input_type</span><span class="o">=</span>str<span class="o">]</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%
 </span></code></pre></div>
 
 
