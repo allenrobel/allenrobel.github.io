@@ -12,13 +12,13 @@
         <meta name="author" content="Allen Robel">
       
       
-        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/scripts/fabric_details/">
+        <link rel="canonical" href="https://allenrobel.github.io/ndfc-python/scripts/fabric_info/">
       
       
         <link rel="prev" href="../device_info/">
       
       
-        <link rel="next" href="../maintenance_mode/">
+        <link rel="next" href="../image_policy_info/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>fabric_details.py - ndfc-python</title>
+        <title>fabric_info.py - ndfc-python</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#fabric_detailspy" class="md-skip">
+        <a href="#fabric_infopy" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              fabric_details.py
+              fabric_info.py
             
           </span>
         </div>
@@ -590,6 +590,10 @@
       
         
       
+        
+      
+        
+      
     
     
       
@@ -709,7 +713,7 @@
           
   
   <span class="md-ellipsis">
-    fabric_details.py
+    fabric_info.py
   </span>
   
 
@@ -720,7 +724,7 @@
         
   
   <span class="md-ellipsis">
-    fabric_details.py
+    fabric_info.py
   </span>
   
 
@@ -829,6 +833,48 @@
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image_policy_info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    image_policy_info.py
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../image_policy_info_all/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    image_policy_info_all.py
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -1324,11 +1370,11 @@
   
 
 
-<h1 id="fabric_detailspy">fabric_details.py<a class="headerlink" href="#fabric_detailspy" title="Permanent link">&para;</a></h1>
+<h1 id="fabric_infopy">fabric_info.py<a class="headerlink" href="#fabric_infopy" title="Permanent link">&para;</a></h1>
 <h2 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h2>
-<p>Returns fabric details for one or more fabrics.</p>
+<p>Returns fabric information for one or more fabrics.</p>
 <h2 id="example-configuration-file">Example configuration file<a class="headerlink" href="#example-configuration-file" title="Permanent link">&para;</a></h2>
-<div class="language-yaml highlight"><span class="filename">config/config_fabric_details.yaml</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
+<div class="language-yaml highlight"><span class="filename">config/config_fabric_info.yaml</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">config</span><span class="p">:</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">fabric_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MyFabric1</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">fabric_name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MyFabric2</span>
@@ -1343,12 +1389,12 @@ credentials sources.</p>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_IP4</span><span class="o">=</span><span class="m">10</span>.1.1.1
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_PASSWORD</span><span class="o">=</span>MySecret
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_USERNAME</span><span class="o">=</span>admin
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>./fabric_details.py<span class="w"> </span>--config<span class="w"> </span>config/config_fabric_details.yaml
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>./fabric_info.py<span class="w"> </span>--config<span class="w"> </span>config/config_fabric_info.yaml
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># output not shown</span>
 </span></code></pre></div>
 <h2 id="sample-output">Sample output<a class="headerlink" href="#sample-output" title="Permanent link">&para;</a></h2>
 <h3 id="success">Success<a class="headerlink" href="#success" title="Permanent link">&para;</a></h3>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./fabric_details.py<span class="w"> </span>--config<span class="w"> </span>prod/config_fabric_details.yaml
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./fabric_info.py<span class="w"> </span>--config<span class="w"> </span>prod/config_fabric_info.yaml
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="o">{</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="s2">&quot;asn&quot;</span>:<span class="w"> </span><span class="s2">&quot;65001&quot;</span>,
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="s2">&quot;createdOn&quot;</span>:<span class="w"> </span><span class="m">1722963281113</span>,
@@ -1697,12 +1743,12 @@ credentials sources.</p>
 </span></code></pre></div>
 <h3 id="failure">Failure<a class="headerlink" href="#failure" title="Permanent link">&para;</a></h3>
 <h4 id="fabric-does-not-exist">Fabric does not exist<a class="headerlink" href="#fabric-does-not-exist" title="Permanent link">&para;</a></h4>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./fabric_details.py<span class="w"> </span>--config<span class="w"> </span>prod/config_fabric_details.yaml
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./fabric_info.py<span class="w"> </span>--config<span class="w"> </span>prod/config_fabric_info.yaml
 </span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>Fabric<span class="w"> </span>MyFabric1<span class="w"> </span>does<span class="w"> </span>not<span class="w"> </span>exist<span class="w"> </span>on<span class="w"> </span>the<span class="w"> </span>controller
 </span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%
 </span></code></pre></div>
 <h4 id="invalid-credentials">Invalid credentials<a class="headerlink" href="#invalid-credentials" title="Permanent link">&para;</a></h4>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./fabric_details.py<span class="w"> </span>--config<span class="w"> </span>prod/config_fabric_details.yaml<span class="w"> </span>--nd-username<span class="w"> </span>SomeRandomDude
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./fabric_info.py<span class="w"> </span>--config<span class="w"> </span>prod/config_fabric_info.yaml<span class="w"> </span>--nd-username<span class="w"> </span>SomeRandomDude
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Exiting.<span class="w">  </span>Error<span class="w"> </span>detail:<span class="w"> </span>NdfcPythonSender.commit:<span class="w"> </span>Unable<span class="w"> </span>to<span class="w"> </span>login<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>controller.<span class="w"> </span>Error<span class="w"> </span>detail:<span class="w"> </span>Sender.update_token:<span class="w"> </span>Unable<span class="w"> </span>to<span class="w"> </span>parse<span class="w"> </span>token<span class="w"> </span>from<span class="w"> </span>response:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;RETURN_CODE&#39;</span>:<span class="w"> </span><span class="m">401</span>,<span class="w"> </span><span class="s1">&#39;DATA&#39;</span>:<span class="w"> </span><span class="o">{</span><span class="s1">&#39;error&#39;</span>:<span class="w"> </span><span class="s1">&#39;Invalid Username/Password&#39;</span><span class="o">}</span>,<span class="w"> </span><span class="s1">&#39;MESSAGE&#39;</span>:<span class="w"> </span><span class="s1">&#39;Unauthorized&#39;</span>,<span class="w"> </span><span class="s1">&#39;METHOD&#39;</span>:<span class="w"> </span><span class="s1">&#39;POST&#39;</span>,<span class="w"> </span><span class="s1">&#39;REQUEST_PATH&#39;</span>:<span class="w"> </span><span class="s1">&#39;https://10.1.1.1/login&#39;</span><span class="o">}</span>
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%
 </span></code></pre></div>
@@ -1758,13 +1804,13 @@ credentials sources.</p>
         
         
           
-          <a href="../maintenance_mode/" class="md-footer__link md-footer__link--next" aria-label="Next: maintenance_mode.py">
+          <a href="../image_policy_info/" class="md-footer__link md-footer__link--next" aria-label="Next: image_policy_info.py">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                maintenance_mode.py
+                image_policy_info.py
               </div>
             </div>
             <div class="md-footer__button md-icon">
