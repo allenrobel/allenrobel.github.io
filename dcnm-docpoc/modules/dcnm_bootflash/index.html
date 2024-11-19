@@ -12,13 +12,13 @@
         <meta name="author" content="Allen Robel">
       
       
-        <link rel="canonical" href="https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_maintenance_mode/">
+        <link rel="canonical" href="https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_bootflash/">
       
       
-        <link rel="prev" href="../dcnm_links/">
+        <link rel="prev" href="../../plugins/httpapi/">
       
       
-        <link rel="next" href="../dcnm_network/">
+        <link rel="next" href="../dcnm_fabric/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -26,7 +26,7 @@
     
     
       
-        <title>dcnm_maintenance_mode - dcnm-docpoc</title>
+        <title>dcnm_fabric - dcnm-docpoc</title>
       
     
     
@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#dcnm_maintenance_mode" class="md-skip">
+        <a href="#dcnm_bootflash" class="md-skip">
           Skip to content
         </a>
       
@@ -112,7 +112,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              dcnm_maintenance_mode
+              dcnm_fabric
             
           </span>
         </div>
@@ -290,7 +290,7 @@
     
     
       <li class="md-tabs__item md-tabs__item--active">
-        <a href="../dcnm_bootflash/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link">
           
   
     
@@ -693,10 +693,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../dcnm_bootflash/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    dcnm_fabric
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -705,6 +725,164 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    <span class="md-ellipsis">
+      options
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#config" class="md-nav__link">
+    <span class="md-ellipsis">
+      config
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="config">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#switches" class="md-nav__link">
+    <span class="md-ellipsis">
+      switches
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="switches">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ip_address" class="md-nav__link">
+    <span class="md-ellipsis">
+      ip_address
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      targets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="targets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filepath" class="md-nav__link">
+    <span class="md-ellipsis">
+      filepath
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervisor" class="md-nav__link">
+    <span class="md-ellipsis">
+      supervisor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#targets_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      targets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="targets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filepath_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      filepath
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervisor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      supervisor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#state" class="md-nav__link">
+    <span class="md-ellipsis">
+      state
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Examples
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -861,30 +1039,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    dcnm_maintenance_mode
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../dcnm_maintenance_mode/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -893,152 +1051,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#options" class="md-nav__link">
-    <span class="md-ellipsis">
-      options
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="options">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#config" class="md-nav__link">
-    <span class="md-ellipsis">
-      config
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="config">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#deploy" class="md-nav__link">
-    <span class="md-ellipsis">
-      deploy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      mode
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#switches" class="md-nav__link">
-    <span class="md-ellipsis">
-      switches
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="switches">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#deploy_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      deploy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#ip_address" class="md-nav__link">
-    <span class="md-ellipsis">
-      ip_address
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mode_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      mode
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wait_for_mode_change" class="md-nav__link">
-    <span class="md-ellipsis">
-      wait_for_mode_change
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#wait_for_mode_change_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      wait_for_mode_change
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#state" class="md-nav__link">
-    <span class="md-ellipsis">
-      state
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#examples" class="md-nav__link">
-    <span class="md-ellipsis">
-      Examples
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1308,24 +1320,6 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#deploy" class="md-nav__link">
-    <span class="md-ellipsis">
-      deploy
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mode" class="md-nav__link">
-    <span class="md-ellipsis">
-      mode
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#switches" class="md-nav__link">
     <span class="md-ellipsis">
       switches
@@ -1334,15 +1328,6 @@
   
     <nav class="md-nav" aria-label="switches">
       <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#deploy_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      deploy
-    </span>
-  </a>
-  
-</li>
         
           <li class="md-nav__item">
   <a href="#ip_address" class="md-nav__link">
@@ -1354,18 +1339,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#mode_1" class="md-nav__link">
+  <a href="#targets" class="md-nav__link">
     <span class="md-ellipsis">
-      mode
+      targets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="targets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filepath" class="md-nav__link">
+    <span class="md-ellipsis">
+      filepath
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#wait_for_mode_change" class="md-nav__link">
+  <a href="#supervisor" class="md-nav__link">
     <span class="md-ellipsis">
-      wait_for_mode_change
+      supervisor
     </span>
   </a>
   
@@ -1376,12 +1371,41 @@
   
 </li>
         
+      </ul>
+    </nav>
+  
+</li>
+        
           <li class="md-nav__item">
-  <a href="#wait_for_mode_change_1" class="md-nav__link">
+  <a href="#targets_1" class="md-nav__link">
     <span class="md-ellipsis">
-      wait_for_mode_change
+      targets
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="targets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#filepath_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      filepath
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supervisor_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      supervisor
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
         
@@ -1431,7 +1455,7 @@
   
 
 
-<h1 id="dcnm_maintenance_mode">dcnm_maintenance_mode<a class="headerlink" href="#dcnm_maintenance_mode" title="Permanent link">&para;</a></h1>
+<h1 id="dcnm_bootflash">dcnm_bootflash<a class="headerlink" href="#dcnm_bootflash" title="Permanent link">&para;</a></h1>
 <details open="open">
 <summary>Details</summary>
 <ul>
@@ -1440,11 +1464,11 @@
 </ul>
 </li>
 <li>description<ul>
-<li>Enable Maintenance or Normal Mode.</li>
+<li>Delete, query bootflash files.</li>
 </ul>
 </li>
 <li>short_description<ul>
-<li>Manage Maintenance Mode Configuration of NX-OS Switches.</li>
+<li>Bootflash management for Nexus switches.</li>
 </ul>
 </li>
 <li>version_added<ul>
@@ -1462,60 +1486,11 @@
 <summary>Details</summary>
 <ul>
 <li>description<ul>
-<li>A dictionary containing the maintenance mode configuration.</li>
+<li>Configuration parameters for the module.</li>
 </ul>
 </li>
 <li>required<ul>
 <li>True</li>
-</ul>
-</li>
-</ul>
-</details>
-<h4 id="deploy">deploy<a class="headerlink" href="#deploy" title="Permanent link">&para;</a></h4>
-<details open="open">
-<summary>Details</summary>
-<ul>
-<li>default<ul>
-<li>False</li>
-</ul>
-</li>
-<li>description<ul>
-<li>Whether to deploy the switch configurations.</li>
-</ul>
-</li>
-<li>required<ul>
-<li>False</li>
-</ul>
-</li>
-<li>type<ul>
-<li>bool</li>
-</ul>
-</li>
-</ul>
-</details>
-<h4 id="mode">mode<a class="headerlink" href="#mode" title="Permanent link">&para;</a></h4>
-<details open="open">
-<summary>Details</summary>
-<ul>
-<li>choices<ul>
-<li>maintenance</li>
-<li>normal</li>
-</ul>
-</li>
-<li>default<ul>
-<li>normal</li>
-</ul>
-</li>
-<li>description<ul>
-<li>Enable maintenance or normal mode on all switches.</li>
-</ul>
-</li>
-<li>required<ul>
-<li>False</li>
-</ul>
-</li>
-<li>type<ul>
-<li>bool</li>
 </ul>
 </li>
 </ul>
@@ -1525,38 +1500,11 @@
 <summary>Details</summary>
 <ul>
 <li>description<ul>
-<li>A list of target switches. </li>
-<li>Per-switch options override the global options.</li>
+<li>List of dictionaries containing switches on which query or delete operations are executed.</li>
 </ul>
 </li>
 <li>elements<ul>
 <li>dict</li>
-</ul>
-</li>
-<li>required<ul>
-<li>True</li>
-</ul>
-</li>
-</ul>
-</details>
-<h5 id="deploy_1">deploy<a class="headerlink" href="#deploy_1" title="Permanent link">&para;</a></h5>
-<details open="open">
-<summary>Details</summary>
-<ul>
-<li>default<ul>
-<li>False</li>
-</ul>
-</li>
-<li>description<ul>
-<li>Whether to deploy the switch configuration.</li>
-</ul>
-</li>
-<li>required<ul>
-<li>False</li>
-</ul>
-</li>
-<li>type<ul>
-<li>bool</li>
 </ul>
 </li>
 </ul>
@@ -1566,7 +1514,7 @@
 <summary>Details</summary>
 <ul>
 <li>description<ul>
-<li>The IP address of the switch.</li>
+<li>The ip address of a switch.</li>
 </ul>
 </li>
 <li>required<ul>
@@ -1579,21 +1527,61 @@
 </li>
 </ul>
 </details>
-<h5 id="mode_1">mode<a class="headerlink" href="#mode_1" title="Permanent link">&para;</a></h5>
+<h5 id="targets">targets<a class="headerlink" href="#targets" title="Permanent link">&para;</a></h5>
+<details open="open">
+<summary>Details</summary>
+<ul>
+<li>default<ul>
+<li>[]</li>
+</ul>
+</li>
+<li>description<ul>
+<li>List of dictionaries containing options for files to be deleted or queried.</li>
+</ul>
+</li>
+<li>elements<ul>
+<li>dict</li>
+</ul>
+</li>
+<li>required<ul>
+<li>False</li>
+</ul>
+</li>
+</ul>
+</details>
+<h6 id="filepath">filepath<a class="headerlink" href="#filepath" title="Permanent link">&para;</a></h6>
+<details open="open">
+<summary>Details</summary>
+<ul>
+<li>description<ul>
+<li>The path to the file to be deleted or queried.  Only files in the root directory of the partition are currently supported.</li>
+</ul>
+</li>
+<li>required<ul>
+<li>True</li>
+</ul>
+</li>
+<li>type<ul>
+<li>str</li>
+</ul>
+</li>
+</ul>
+</details>
+<h6 id="supervisor">supervisor<a class="headerlink" href="#supervisor" title="Permanent link">&para;</a></h6>
 <details open="open">
 <summary>Details</summary>
 <ul>
 <li>choices<ul>
-<li>maintenance</li>
-<li>normal</li>
+<li>active</li>
+<li>standby</li>
 </ul>
 </li>
 <li>default<ul>
-<li>normal</li>
+<li>active</li>
 </ul>
 </li>
 <li>description<ul>
-<li>Enable maintenance or normal mode for the switch.</li>
+<li>Either active or standby. The supervisor containing the filepath.</li>
 </ul>
 </li>
 <li>required<ul>
@@ -1604,26 +1592,8 @@
 <li>str</li>
 </ul>
 </li>
-</ul>
-</details>
-<h5 id="wait_for_mode_change">wait_for_mode_change<a class="headerlink" href="#wait_for_mode_change" title="Permanent link">&para;</a></h5>
-<details open="open">
-<summary>Details</summary>
-<ul>
-<li>default<ul>
-<li>False</li>
-</ul>
-</li>
-<li>description<ul>
-<li>If deploy is enabled, whether to wait for NDFC to push the change to the switch. Ignored if deploy is not enabled.</li>
-</ul>
-</li>
-<li>required<ul>
-<li>False</li>
-</ul>
-</li>
 <li>type<ul>
-<li>bool</li>
+<li>list</li>
 </ul>
 </li>
 <li>type<ul>
@@ -1632,16 +1602,61 @@
 </li>
 </ul>
 </details>
-<h4 id="wait_for_mode_change_1">wait_for_mode_change<a class="headerlink" href="#wait_for_mode_change_1" title="Permanent link">&para;</a></h4>
+<h4 id="targets_1">targets<a class="headerlink" href="#targets_1" title="Permanent link">&para;</a></h4>
 <details open="open">
 <summary>Details</summary>
 <ul>
 <li>default<ul>
-<li>False</li>
+<li>[]</li>
 </ul>
 </li>
 <li>description<ul>
-<li>If deploy is enabled, whether to wait for NDFC to push the change to the switch.  Ignored if deploy is not enabled.</li>
+<li>List of dictionaries containing options for files to be deleted or queried.</li>
+</ul>
+</li>
+<li>elements<ul>
+<li>dict</li>
+</ul>
+</li>
+<li>required<ul>
+<li>False</li>
+</ul>
+</li>
+</ul>
+</details>
+<h5 id="filepath_1">filepath<a class="headerlink" href="#filepath_1" title="Permanent link">&para;</a></h5>
+<details open="open">
+<summary>Details</summary>
+<ul>
+<li>description<ul>
+<li>The path to the file to be deleted or queried.</li>
+</ul>
+</li>
+<li>required<ul>
+<li>True</li>
+</ul>
+</li>
+<li>type<ul>
+<li>str</li>
+</ul>
+</li>
+</ul>
+</details>
+<h5 id="supervisor_1">supervisor<a class="headerlink" href="#supervisor_1" title="Permanent link">&para;</a></h5>
+<details open="open">
+<summary>Details</summary>
+<ul>
+<li>choices<ul>
+<li>active</li>
+<li>standby</li>
+</ul>
+</li>
+<li>default<ul>
+<li>active</li>
+</ul>
+</li>
+<li>description<ul>
+<li>Either active or standby. The supervisor containing the filepath.</li>
 </ul>
 </li>
 <li>required<ul>
@@ -1649,7 +1664,11 @@
 </ul>
 </li>
 <li>type<ul>
-<li>bool</li>
+<li>str</li>
+</ul>
+</li>
+<li>type<ul>
+<li>list</li>
 </ul>
 </li>
 <li>type<ul>
@@ -1663,12 +1682,12 @@
 <summary>Details</summary>
 <ul>
 <li>choices<ul>
-<li>merged</li>
+<li>deleted</li>
 <li>query</li>
 </ul>
 </li>
 <li>default<ul>
-<li>merged</li>
+<li>query</li>
 </ul>
 </li>
 <li>description<ul>
@@ -1686,45 +1705,87 @@
 <summary>Details</summary>
 </details>
 <div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
-</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Enable maintenance mode on all switches.</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># Do not deploy the configuration on any switch.</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configure switch mode</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">  </span><span class="nt">cisco.dcnm.dcnm_maintenance_mode</span><span class="p">:</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">merged</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">config</span><span class="p">:</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">        </span><span class="nt">deploy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="nt">wait_for_mode_change</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maintenance</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">        </span><span class="nt">switches</span><span class="p">:</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.2</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.160.1.3</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.160.1.4</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">  </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">debug</span><span class="p">:</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="nt">var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="c1"># Enable maintenance mode on two switches.</span>
-</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="c1"># Enable normal mode on one switch.</span>
-</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="c1"># Deploy the configuration on one switch.</span>
-</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>
-</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Configure switch mode</span>
-</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">  </span><span class="nt">cisco.dcnm.dcnm_maintenance_mode</span><span class="p">:</span>
-</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">merged</span>
-</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="nt">config</span><span class="p">:</span>
-</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">        </span><span class="nt">deploy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
-</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">        </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maintenance</span>
-</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">        </span><span class="nt">switches</span><span class="p">:</span>
-</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.2</span>
-</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">                </span><span class="nt">mode</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">normal</span>
-</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.160.1.3</span>
-</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">                </span><span class="nt">deploy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">                </span><span class="nt">wait_for_mode_change</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
-</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w">   </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.160.1.4</span>
-</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">  </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result</span>
-</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">debug</span><span class="p">:</span>
-</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="nt">var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="c1"># This module supports the following states:</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1">#</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="c1"># deleted:</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="c1">#   Delete files from the bootflash of one or more switches.</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="c1">#</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="c1">#   If an image is in use by a device, the module will fail.  Use</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="c1">#   dcnm_image_upgrade module, state deleted, to detach image policies</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="c1">#   containing images to be deleted.</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="c1">#</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="c1"># query:</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="c1">#</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="c1">#   Return information for one or more files.</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="c1">#</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="c1"># Delete two files from each of three switches.</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Delete two files from each of two switches</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">  </span><span class="nt">cisco.dcnm.dcnm_bootflash</span><span class="p">:</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deleted</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">      </span><span class="nt">targets</span><span class="p">:</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bootflash:/foo.txt</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">          </span><span class="nt">supervisor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">active</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bootflash:/bar.txt</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">          </span><span class="nt">supervisor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standby</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">      </span><span class="nt">switches</span><span class="p">:</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.1</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.2</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.3</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="c1"># Delete two files from switch 192.168.1.1 and switch 192.168.1.2:</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="c1">#   - foo.txt on the active supervisor&#39;s bootflash: device.</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="c1">#   - bar.txt on the standby supervisor&#39;s bootflash: device.</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="c1"># Delete potentially multiple files from switch 192.168.1.3:</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="c1">#   - All txt files on the standby supervisor&#39;s bootflash: device</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="c1">#     that match the pattern 202401??.txt, e.g. 20240123.txt.</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="c1"># Delete potentially multiple files from switch 192.168.1.4:</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="c1">#   - All txt files on all flash devices on active supervisor.</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Delete files</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">  </span><span class="nt">cisco.dcnm.dcnm_bootflash</span><span class="p">:</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">deleted</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">      </span><span class="nt">targets</span><span class="p">:</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bootflash:/foo.txt</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">          </span><span class="nt">supervisor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">active</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bootflash:/bar.txt</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">          </span><span class="nt">supervisor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standby</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">      </span><span class="nt">switches</span><span class="p">:</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.1</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.2</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.3</span>
+</span><span id="__span-0-53"><a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">          </span><span class="nt">targets</span><span class="p">:</span>
+</span><span id="__span-0-54"><a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bootflash:/202401??.txt</span>
+</span><span id="__span-0-55"><a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">              </span><span class="nt">supervisor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">standby</span>
+</span><span id="__span-0-56"><a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.4</span>
+</span><span id="__span-0-57"><a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="w">          </span><span class="nt">targets</span><span class="p">:</span>
+</span><span id="__span-0-58"><a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;*:/*.txt&quot;</span>
+</span><span id="__span-0-59"><a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="w">              </span><span class="nt">supervisor</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">active</span>
+</span><span id="__span-0-60"><a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="w">  </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result</span>
+</span><span id="__span-0-61"><a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">print result</span>
+</span><span id="__span-0-62"><a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="w">  </span><span class="nt">ansible.builtin.debug</span><span class="p">:</span>
+</span><span id="__span-0-63"><a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="w">    </span><span class="nt">var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result</span>
+</span><span id="__span-0-64"><a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a>
+</span><span id="__span-0-65"><a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="c1"># Query the controller for information about one file on three switches.</span>
+</span><span id="__span-0-66"><a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="c1"># Since the default for supervisor is &quot;active&quot;, the module will query the</span>
+</span><span id="__span-0-67"><a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="c1"># active supervisor&#39;s bootflash: device.</span>
+</span><span id="__span-0-68"><a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a>
+</span><span id="__span-0-69"><a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Query file on three switches</span>
+</span><span id="__span-0-70"><a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="w">  </span><span class="nt">cisco.dcnm.dcnm_bootflash</span><span class="p">:</span>
+</span><span id="__span-0-71"><a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="w">    </span><span class="nt">state</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">query</span>
+</span><span id="__span-0-72"><a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="w">    </span><span class="nt">config</span><span class="p">:</span>
+</span><span id="__span-0-73"><a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a><span class="w">      </span><span class="nt">targets</span><span class="p">:</span>
+</span><span id="__span-0-74"><a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">filepath</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bootflash:/foo.txt</span>
+</span><span id="__span-0-75"><a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="w">    </span><span class="nt">switches</span><span class="p">:</span>
+</span><span id="__span-0-76"><a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.1</span>
+</span><span id="__span-0-77"><a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.2</span>
+</span><span id="__span-0-78"><a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">ip_address</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.3</span>
+</span><span id="__span-0-79"><a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="w">  </span><span class="nt">register</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result</span>
+</span><span id="__span-0-80"><a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">print result</span>
+</span><span id="__span-0-81"><a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a><span class="w">  </span><span class="nt">ansible.builtin.debug</span><span class="p">:</span>
+</span><span id="__span-0-82"><a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a><span class="w">    </span><span class="nt">var</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">result</span>
 </span></code></pre></div>
 
 
@@ -1761,7 +1822,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Footer" >
         
           
-          <a href="../dcnm_links/" class="md-footer__link md-footer__link--prev" aria-label="Previous: dcnm_links">
+          <a href="../../plugins/httpapi/" class="md-footer__link md-footer__link--prev" aria-label="Previous: HTTPAPI">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -1771,20 +1832,20 @@
                 Previous
               </span>
               <div class="md-ellipsis">
-                dcnm_links
+                HTTPAPI
               </div>
             </div>
           </a>
         
         
           
-          <a href="../dcnm_network/" class="md-footer__link md-footer__link--next" aria-label="Next: dcnm_network">
+          <a href="../dcnm_fabric/" class="md-footer__link md-footer__link--next" aria-label="Next: dcnm_fabric">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Next
               </span>
               <div class="md-ellipsis">
-                dcnm_network
+                dcnm_fabric
               </div>
             </div>
             <div class="md-footer__button md-icon">

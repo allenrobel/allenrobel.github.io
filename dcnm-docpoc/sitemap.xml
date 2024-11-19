@@ -2,102 +2,106 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/installation/ansible-galaxy/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/installation/ansible-version-compatibility/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/installation/dcnm-and-ndfc-version-compatibility/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/installation/supported-connections/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
+    </url>
+    <url>
+         <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_bootflash/</loc>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_fabric/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_image_policy/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_image_upgrade/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_image_upload/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_interface/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_inventory/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_links/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_maintenance_mode/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_network/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_policy/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_resource_manager/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_rest/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_service_node/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_service_policy/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_service_route_peering/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_template/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_vpc_pair/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/modules/dcnm_vrf/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/plugins/action/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/dcnm-docpoc/plugins/httpapi/</loc>
-         <lastmod>2024-11-12</lastmod>
+         <lastmod>2024-11-19</lastmod>
     </url>
 </urlset>
