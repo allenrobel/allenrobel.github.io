@@ -2,122 +2,126 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/classes/CredentialSelector/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/classes/Log/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/classes/NetworkCreate/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/classes/NetworkDelete/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/classes/Reachability/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/classes/overview/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
+    </url>
+    <url>
+         <loc>https://allenrobel.github.io/ndfc-python/scripts/bootflash_files_info/</loc>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/controller_info/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/credentials/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/device_info/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/fabric_info/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/image_policy_create/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/image_policy_delete/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/image_policy_info/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/image_policy_info_all/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/image_policy_replace/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/maintenance_mode/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/maintenance_mode_info/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/network_create/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/network_delete/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/reachability/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/rest_get_request/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/rest_post_request/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/scripts/vrf_create/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/setup/clone-the-repositories/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/setup/enable-logging/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/setup/running-the-example-scripts/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/setup/set-credentials/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/setup/update-your-pythonpath/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
     <url>
          <loc>https://allenrobel.github.io/ndfc-python/setup/using-ansible-vault/</loc>
-         <lastmod>2024-11-19</lastmod>
+         <lastmod>2024-11-20</lastmod>
     </url>
 </urlset>
