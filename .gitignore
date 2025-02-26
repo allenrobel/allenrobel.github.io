@@ -1,1 +1,13 @@
+.cache_ggshield
+__pycache__
+id_ed25519
+id_rsa
+*.db
+*.pem
+**/logs
 .DS_Store
+.cache_ggshield
+.pytest_cache
+.ssh
+.venv
+.vscode
