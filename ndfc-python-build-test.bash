@@ -6,6 +6,6 @@ SRC_DIR=$SRC_REPO/site
 
 cd $SRC_REPO
 source .venv/bin/activate
-source .env
+source env/env
 mkdocs build --clean
 
