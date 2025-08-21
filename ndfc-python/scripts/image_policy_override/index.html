@@ -1685,7 +1685,7 @@ the configuration.</p>
 <p>Use this script when you want the controller configuration to exactly
 match the script configuration.</p>
 <h2 id="example-configuration-file">Example configuration file<a class="headerlink" href="#example-configuration-file" title="Permanent link">&para;</a></h2>
-<div class="language-yaml highlight"><span class="filename">config/config_image_policy_override.yaml</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
+<div class="language-yaml highlight"><span class="filename">config/image_policy_override.yaml</span><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nn">---</span>
 </span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">config</span><span class="p">:</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">KR5M</span>
 </span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">      </span><span class="nt">agnostic</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">False</span>
@@ -1710,7 +1710,7 @@ credentials sources.</p>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_IP4</span><span class="o">=</span><span class="m">10</span>.1.1.1
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_PASSWORD</span><span class="o">=</span>MySecret
 </span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nb">export</span><span class="w"> </span><span class="nv">ND_USERNAME</span><span class="o">=</span>admin
-</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>./image_policy_override.py<span class="w"> </span>--config<span class="w"> </span>config/config_image_policy_override.yaml
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>./image_policy_override.py<span class="w"> </span>--config<span class="w"> </span>config/image_policy_override.yaml
 </span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># output not shown</span>
 </span></code></pre></div>
 <h2 id="example-output">Example output<a class="headerlink" href="#example-output" title="Permanent link">&para;</a></h2>
@@ -1719,7 +1719,7 @@ credentials sources.</p>
 not represented in the configuration file.</p>
 <p>Image policies <code>KR5M</code> and <code>NR1F</code> on the controller are updated to match the
 configuration file.</p>
-<div class="language-bash highlight"><span class="filename">Successful execution</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./image_policy_override.py<span class="w"> </span>--config<span class="w"> </span>prod/config_image_policy_override.yaml
+<div class="language-bash highlight"><span class="filename">Successful execution</span><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./image_policy_override.py<span class="w"> </span>--config<span class="w"> </span>prod/image_policy_override.yaml
 </span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="o">{</span>
 </span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="s2">&quot;changed&quot;</span>:<span class="w"> </span>true,
 </span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="s2">&quot;diff&quot;</span>:<span class="w"> </span><span class="o">[</span>
@@ -1841,7 +1841,7 @@ configuration file.</p>
 </span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">      </span><span class="nt">epld_image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">n9000-epld.10.3.1.F.img</span>
 </span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">      </span><span class="nt">release</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10.3.1_nxos64-cs_64bit</span>
 </span></code></pre></div>
-<div class="language-bash highlight"><span class="filename">install package does not exist on the controller</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./image_policy_override.py<span class="w"> </span>--config<span class="w"> </span>prod/config_image_policy_override.yaml
+<div class="language-bash highlight"><span class="filename">install package does not exist on the controller</span><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">(</span>.venv<span class="o">)</span><span class="w"> </span>AROBEL-M-G793%<span class="w"> </span>./image_policy_override.py<span class="w"> </span>--config<span class="w"> </span>prod/image_policy_override.yaml
 </span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>unable<span class="w"> </span>to<span class="w"> </span>override<span class="w"> </span>one<span class="w"> </span>or<span class="w"> </span>more<span class="w"> </span>image<span class="w"> </span>policies
 </span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="o">{</span>
 </span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="s2">&quot;changed&quot;</span>:<span class="w"> </span>true,
